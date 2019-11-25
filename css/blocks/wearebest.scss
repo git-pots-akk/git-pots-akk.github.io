@@ -1,0 +1,51 @@
+.wearebest {
+  background-image: url(../img/bgr/bg_wearebest.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.wearebest__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wearebest__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wearebest__title {
+  margin-bottom: 55px;
+}
+
+.wearebest__list {
+  display: flex;
+}
+
+.wearebest__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wearebest__subtitle {
+  @include lifehack();
+  margin-top: 45px;
+  font-size: 24px;
+  color: $black;
+  text-align: center;
+}
+
+.wearebest__discription {
+  @include ubuntu(Light);
+  margin-top: 30px;
+  font-size: 14px;
+  color: $black;
+  text-align: center;
+}

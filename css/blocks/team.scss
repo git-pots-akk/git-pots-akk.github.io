@@ -1,0 +1,89 @@
+.team {
+  background-image: url(../img/bgr/bg_team.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team-accordeon {
+  background-color: rgba($black, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 53%;
+  padding-top: 80px;
+  padding-left: 100px;
+}
+
+.team__title {
+  margin-bottom: 55px;
+}
+
+.team-accordeon__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-accordeon__trigger {
+  cursor: pointer;
+  @include gagalin();
+  color: $white;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  &:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background: url(../img/icons/bt_down.png) center center no-repeat;
+  }
+}
+
+.team-accordeon__trigger--active {
+  color: $yellow;
+  &:before {
+    background: url(../img/icons/bt_up.png) center center no-repeat;
+  }
+}
+
+.team-accordeon__subtitle {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 0;
+  color: $white;
+  overflow: hidden;
+  line-height: 1.42;
+}
+
+.team-accordeon__trigger--active + .team-accordeon__subtitle {
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+.team-accordeon__img {
+  margin-left: 20px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 25px;
+}
+
+.team-accordeon__discription {
+  @include ubuntu(Light);
+  font-size: 14px;
+}
+.team-accordeon__range {
+  @include ubuntu(bold);
+  margin-bottom: 20px;
+}
