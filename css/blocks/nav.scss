@@ -26,8 +26,15 @@
 }
 
 .nav__link {
+  @include ubuntu(Medium);
   text-decoration: none;
   color: $white;
   font-size: 13px;
   text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 1s;
+  }
 }

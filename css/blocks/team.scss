@@ -60,7 +60,7 @@
   height: 0;
   color: $white;
   overflow: hidden;
-  line-height: 1.42;
+  line-height: 1.7;
 }
 
 .team-accordeon__trigger--active + .team-accordeon__subtitle {
@@ -84,6 +84,6 @@
   font-size: 14px;
 }
 .team-accordeon__range {
-  @include ubuntu(bold);
+  @include ubuntu(Bold);
   margin-bottom: 20px;
 }

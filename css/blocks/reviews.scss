@@ -35,6 +35,10 @@ left: 0;
 background-color: rgba($black, .3);
 padding: 50px 20px;
 transition: opacity .4s;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+
 }
 
 .reviews__name {
@@ -47,8 +51,9 @@ transition: opacity .4s;
 .reviews__text {
   @include ubuntu(Light);
   font-size: 14px;
-  line-height: 2;
+  line-height: 1.7;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .reviews__btn {

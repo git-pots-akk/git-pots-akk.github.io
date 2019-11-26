@@ -309,13 +309,31 @@ template {
 
 @font-face {
   font-family: 'Gagalin';
-  src: url("fonts/Gagalin/Gagalin-Regular.otf");
+  src: url("../../fonts/Gagalin/Gagalin-Regular.otf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu-B';
   src: url("../../fonts/Ubuntu/Ubuntu-B.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu-Light';
+  src: url("../../fonts/Ubuntu/Ubuntu-Light.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url("../../fonts/Ubuntu/Ubuntu-Medium.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  src: url("../../fonts/Ubuntu/Ubuntu-Regular.ttf");
   font-weight: normal;
   font-style: normal; }
 
@@ -333,8 +351,7 @@ body {
   font-size: 16px;
   line-height: 1.42;
   position: relative;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
+  font-family: 'Ubuntu-Light', sans-serif;
   color: #2f3234; }
 
 .wrapper {
@@ -459,18 +476,33 @@ button {
     display: none; }
 
 .nav__link {
+  font-family: 'Ubuntu-Medium', sans-serif;
   text-decoration: none;
   color: #fff;
   font-size: 13px;
   text-transform: uppercase; }
+  .nav__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
 
 .btn {
+  font-family: 'Ubuntu-Medium', sans-serif;
+  font-size: 13px;
   padding: 12px 15px;
   border-radius: 5px;
   background-color: #e45028;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff; }
+  .btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
 
 .promo {
   background-image: url(../img/bgr/bg_promo.png);
@@ -561,7 +593,17 @@ button {
   padding: 50px 20px;
   -webkit-transition: opacity .4s;
   -o-transition: opacity .4s;
-  transition: opacity .4s; }
+  transition: opacity .4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
 
 .reviews__name {
   font-family: 'Gagalin', sans-serif;
@@ -570,16 +612,16 @@ button {
   margin-bottom: 30px; }
 
 .reviews__text {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
+  font-family: 'Ubuntu-Light', sans-serif;
   font-size: 14px;
-  line-height: 2;
-  margin-bottom: 20px; }
+  line-height: 1.7;
+  margin-bottom: 20px;
+  overflow: hidden; }
 
 .reviews__btn {
   background-color: #2f3234; }
 
-.fixed__menu {
+.sidebar-menu {
   position: fixed;
   top: 100px;
   right: 60px;
@@ -588,7 +630,7 @@ button {
   -ms-flex-align: center;
   align-items: center; }
 
-.fixed__menu__dot {
+.sidebar-menu__dot {
   display: block;
   height: 20px;
   width: 20px;
@@ -596,9 +638,9 @@ button {
   border: 1px solid transparent;
   margin-bottom: 2px;
   position: relative; }
-  .fixed__menu__dot:active {
+  .sidebar-menu__dot:active {
     border-color: #fff; }
-  .fixed__menu__dot:before {
+  .sidebar-menu__dot:before {
     content: "";
     width: 6px;
     height: 6px;
@@ -671,12 +713,12 @@ button {
   text-align: center; }
 
 .wearebest__discription {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
+  font-family: 'Ubuntu-Light', sans-serif;
   margin-top: 30px;
   font-size: 14px;
   color: #2f3234;
-  text-align: center; }
+  text-align: center;
+  line-height: 1.7; }
 
 .team {
   background-image: url(../img/bgr/bg_team.jpg);
@@ -747,7 +789,7 @@ button {
   height: 0;
   color: #fff;
   overflow: hidden;
-  line-height: 1.42; }
+  line-height: 1.7; }
 
 .team-accordeon__trigger--active + .team-accordeon__subtitle {
   height: 100%;
@@ -766,13 +808,11 @@ button {
   margin-right: 25px; }
 
 .team-accordeon__discription {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
+  font-family: 'Ubuntu-Light', sans-serif;
   font-size: 14px; }
 
 .team-accordeon__range {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
+  font-family: 'Ubuntu-B', sans-serif;
   margin-bottom: 20px; }
 
 .order {
