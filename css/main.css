@@ -619,9 +619,12 @@ button {
   overflow: hidden; }
 
 .reviews__btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   background-color: #2f3234; }
 
-.sidebar-menu {
+.sidebar {
   position: fixed;
   top: 100px;
   right: 60px;
