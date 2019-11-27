@@ -737,6 +737,10 @@ input, textarea {
   text-align: center;
   line-height: 1.7; }
 
+.icon {
+  width: 100px;
+  height: 90px; }
+
 .team {
   background-image: url(../img/bgr/bg_team.jpg);
   background-position: center center;
