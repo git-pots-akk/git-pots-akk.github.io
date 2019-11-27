@@ -5,3 +5,107 @@
   background-repeat: no-repeat;
   position: relative;
 }
+
+.order__title {
+  margin-bottom: 55px;
+}
+
+.order__form {
+  display: flex;
+  justify-content: center;
+}
+
+.delivery-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 20px;
+}
+
+.order-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.delivery-info__contacts {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.delivery-info__street {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.order-info__comments {
+  margin-bottom: 25px;
+}
+
+.order-info__payment, .order-info__nocall {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+ .delivery__name, .delivery__tel, .delivery-info__str, .delivery__street, .delivery__home, .delivery__housing, .delivery__flat, .delivery__floor, .order__comments {
+  width: 100%;
+}
+
+.delivery-info__address {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.delivery-info__name, .delivery-info__home, .delivery-info__housing, .delivery-info__flat {
+ margin-right: 20px; 
+}
+
+.order__comments {
+  height: 135px;
+  resize: none;
+}
+
+.order__subtitle {
+  @include ubuntu(Light);
+  font-size: 14px;
+  color: $white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.order__cash, .order__card, .order__nocall {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.btn__send {
+
+  &:focus {
+    border: none;
+  }
+}
+
+.btn__reset {
+  background-color: inherit;
+  color: $white;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    border: none;
+  }
+}

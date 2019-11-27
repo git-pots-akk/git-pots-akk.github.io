@@ -96,3 +96,18 @@ button {
   cursor: pointer;
   color: inherit;
 }
+
+input, textarea {
+  border-radius: 5px;
+  padding: 10px 20px;
+  @include ubuntu(Light);
+  size: 14px;
+  color: $black;
+  border: none;
+  outline: none;
+
+  &:focus {
+    border: 2px solid $yellow;
+    transition: .3s;
+  }
+}

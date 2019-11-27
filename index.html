@@ -252,24 +252,69 @@
     </section>
 
     <section class="section order" id="order">
-      <h1 class="title order__title title--centered">Закажите доставку</h1>
-      <form action="" class="form">
-        <div class="form__col">
-          <div class="form__row">
-            <label class="form__label">
-
-            </label>
-          </div>
-          <div class="form__row"></div>
-          <div class="form__row"></div>
+      <div class="container order__container">
+        <div class="order__content">
+          <h2 class="title order__title title--centered">Закажите доставку</h2>
+          <form action="" class="order__form" method="GET">
+            <div class="delivery-info">
+              <div class="delivery-info__contacts">
+                <div class="delivery-info__name">
+                  <p class="order__subtitle">Имя</p>
+                  <input type="text" class="delivery__name">
+                </div>
+                <div class="delivery-info__tel">
+                  <p class="order__subtitle">Телефон</p>
+                  <input type="text" class="delivery__tel">
+                </div>
+              </div>
+              <div class="delivery-info__street">
+                <div class="delivery-info__str">
+                  <p class="order__subtitle"> Улица</p>
+                  <input type="text" class="delivery__street">
+                </div>
+              </div>
+              <div class="delivery-info__address">
+                <div class="delivery-info__home">
+                  <p class="order__subtitle">Дом</p>
+                  <input type="text" class="delivery__home">
+                </div>
+                <div class="delivery-info__housing">
+                  <p class="order__subtitle">Корпус</p>
+                  <input type="text" class="delivery__housing">
+                </div>
+                <div class="delivery-info__flat">
+                  <p class="order__subtitle">Квартира</p>
+                  <input type="text" class="delivery__flat">
+                </div>
+                <div class="delivery-info__floor">
+                  <p class="order__subtitle">Этаж</p>
+                  <input type="text" class="delivery__floor">
+                </div>
+              </div>
+            </div>
+            <div class="order-info">
+              <div class="order-info__comments">
+                <p class="order__subtitle">Комментарий</p>
+                <textarea name="comments" id="" class="order__comments"></textarea>
+              </div>
+              <div class="order-info__payment">
+                <input type="radio" name="payment" class="order__cash">
+                <span class="order__subtitle">Потребуется сдача</span>
+                <input type="radio" name="payment" class="order__card">
+                <span class="order__subtitle">Оплата по карте</span>
+              </div>
+              <div class="order-info__nocall">
+                <input type="checkbox" class="order__nocall">
+                <span class="order__subtitle">Не перезванивать</span>
+              </div>
+              <div class="order-info__buttons">
+                <input type="button" class="btn btn__send" value="Заказать">
+                <input type="reset" class="btn__reset" value="Очистить">
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="form__col">
-          <div class="form__row"></div>
-          <div class="form__row"></div>
-          <div class="form__row"></div>
-          <div class="form__row"></div>
-        </div>
-      </form>
+      </div>
     </section>
 
     <aside class="sidebar">
@@ -297,9 +342,9 @@
         </li>
         <li class="sidebar-menu__item">
             <a href="#order" class="sidebar-menu__dot" aria-label="Заказать"></a>
-        </li>
-      </ul>
+          </li>
+        </ul>
     </aside>
-
+    
   </body>
-</html>
+  </html>

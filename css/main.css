@@ -428,6 +428,20 @@ button {
   cursor: pointer;
   color: inherit; }
 
+input, textarea {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: 'Ubuntu-Light', sans-serif;
+  size: 14px;
+  color: #2f3234;
+  border: none;
+  outline: none; }
+  input:focus, textarea:focus {
+    border: 2px solid #ffcc33;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -824,3 +838,122 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; }
+
+.order__title {
+  margin-bottom: 55px; }
+
+.order__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.delivery-info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-right: 20px; }
+
+.order-info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.delivery-info__contacts {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 25px; }
+
+.delivery-info__street {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 25px; }
+
+.order-info__comments {
+  margin-bottom: 25px; }
+
+.order-info__payment, .order-info__nocall {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 15px; }
+
+.delivery__name, .delivery__tel, .delivery-info__str, .delivery__street, .delivery__home, .delivery__housing, .delivery__flat, .delivery__floor, .order__comments {
+  width: 100%; }
+
+.delivery-info__address {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 25px; }
+
+.delivery-info__name, .delivery-info__home, .delivery-info__housing, .delivery-info__flat {
+  margin-right: 20px; }
+
+.order__comments {
+  height: 135px;
+  resize: none; }
+
+.order__subtitle {
+  font-family: 'Ubuntu-Light', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  line-height: 1; }
+
+.order__cash, .order__card, .order__nocall {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  cursor: pointer; }
+
+.btn__send:focus {
+  border: none; }
+
+.btn__reset {
+  background-color: inherit;
+  color: #fff;
+  border: none; }
+  .btn__reset:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+  .btn__reset:focus {
+    border: none; }
