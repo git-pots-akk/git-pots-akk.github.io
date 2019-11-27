@@ -442,6 +442,10 @@ input, textarea {
     -o-transition: .3s;
     transition: .3s; }
 
+.icon {
+  width: 100px;
+  height: 90px; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -736,10 +740,6 @@ input, textarea {
   color: #2f3234;
   text-align: center;
   line-height: 1.7; }
-
-.icon {
-  width: 100px;
-  height: 90px; }
 
 .team {
   background-image: url(../img/bgr/bg_team.jpg);
