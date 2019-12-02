@@ -16,31 +16,59 @@
   height: 100%;
   display: flex;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15%;
+  }
+
+  @include phones {
+    padding: 0 10%;
+  }
 }
 
 .promo__title {
-  margin-top: 50px;
-  margin-left: 20px;
+  padding: rem(50px) rem(20px);
+
+  @include tablets {
+    text-align: center;
+    margin-top: rem(20px);
+  }
+
+  @include phones {
+    font-size: rem(63px);
+  }
+}
+
+.promo__img {
+  width: rem(450px);
+  height: rem(350px);
 }
 
 .promo__subtitle {
   @include lifehack();
-  margin-top: 20px;
-  font-size: 56px;
+  margin-top: rem(20px);
+  font-size: rem(56px);
   color: $white;
   line-height: 1;
+
+  @include phones {
+    font-size: rem(54px);
+  }
 }
 
 .promo__scroll-btn {
-  width: 29px;
-  height: 15px;
+  width: rem(29px);
+  height: rem(15px);
   background-image: url('../img/icons/arrow-scroll.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-size: contain;
   display: block;
   position: absolute;
-  bottom: 30px;
+  bottom: rem(30px);
   left: 50%;
   transform: translateX(-50%);
 }

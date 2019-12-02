@@ -37,11 +37,18 @@
               <il class="nav__item">
                 <a href="#contacts" class="nav__link">Контакты</a>
               </il>
-              <il class="">
-                <a href="#order" class="btn">Заказать</a>
-              </il>
             </ul>
           </nav>
+          <div class="header__order-btn">
+            <a href="#order" class="btn">Заказать</a>
+          </div>
+          <div class="ham-menu">
+            <a href="#" class="ham-menu__link">
+              <svg class="ham-menu__icon">
+                <use xlink:href="img/icons/sprite.svg#ham_menu"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -73,11 +80,13 @@
                     <use xlink:href="img/icons/sprite.svg#meat"></use>
                   </svg>
               </div>
-              <div class="wearebest__subtitle">
-                100% свежее мясо
-              </div>
-              <div class="wearebest__discription">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione id incidunt, iusto fuga tempora perspiciatis.
+              <div class="wearebest__text">
+                <div class="wearebest__subtitle">
+                  100% свежее мясо
+                </div>
+                <div class="wearebest__discription">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione id incidunt, iusto fuga tempora perspiciatis.
+                </div>
               </div>
             </li>
             <li class="wearebest__item">
@@ -86,11 +95,13 @@
                   <use xlink:href="img/icons/sprite.svg#hand"></use>
                 </svg>
               </div>
-              <div class="wearebest__subtitle">
-                Ручная сборка
-              </div>
-              <div class="wearebest__discription">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione id incidunt, iusto fuga tempora perspiciatis.
+              <div class="wearebest__text">
+                <div class="wearebest__subtitle">
+                  Ручная сборка
+                </div>
+                <div class="wearebest__discription">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione id incidunt, iusto fuga tempora perspiciatis.
+                </div>
               </div>
             </li>
             <li class="wearebest__item">
@@ -99,11 +110,13 @@
                   <use xlink:href="img/icons/sprite.svg#natural"></use>
                 </svg>
               </div>
-              <div class="wearebest__subtitle">
-                Натуральные ингридиенты
-              </div>
-              <div class="wearebest__discription">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione id incidunt, iusto fuga tempora perspiciatis.
+              <div class="wearebest__text">
+                <div class="wearebest__subtitle">
+                  Натуральные ингридиенты
+                </div>
+                <div class="wearebest__discription">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione id incidunt, iusto fuga tempora perspiciatis.
+                </div>
               </div>
             </li>
           </ul>
@@ -112,7 +125,7 @@
     </section>
 
     <section class="section team" id="team">
-      <div class="container container__team">
+      <div class="container__team">
         <div class="team-accordeon">
           <h2 class=" title team__title title--color--yellow">Команда</h2>
           <ul class="team-accordeon__list">
@@ -127,7 +140,7 @@
               </div>
             </li>
             <li class="team-accordeon__item">
-              <h3 class="team-accordeon__trigger team-accordeon__trigger--active">Сильвестр Сталоне</h3>
+              <h3 class="team-accordeon__trigger">Сильвестр Сталоне</h3>
               <div class="team-accordeon__subtitle">
                 <img class="team-accordeon__img" src="img/photo/team/team.jpg" alt="Фотография">
                 <div class="team-accordeon__discription">
@@ -159,26 +172,29 @@
       </div>
     </section>
 
-    <section class="section menu">
-      <div class="container menu__container">
-        <div class="menu__content">
-          <h2 class="title menu__title title--color--white">
-            Меню
-          </h2>
-          <div class="menu-accordeon">
-            <ul class="menu-accordeon__list">
-              <li class="menu-accordeon__item menu-accordeon__item--meat">
-                <h3 class="title menu-accordeon__title title--color--white">Для мясоедов</h3>
-              </li>
-              <li class="menu-accordeon__item">
-                <h3 class="title menu-accordeon__title title--color--white">Вегетарианское</h3>
-              </li>
-              <li class="menu-accordeon__item">
-                <h3 class="title menu-accordeon__title title--color--white">Диетическое</h3>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <section class="section menu" id="menu">
+      <h2 class="title menu__title title--color--white">Меню</h2>
+      <div class="menu-accordeon">
+        <ul class="menu-accordeon__list">
+          <li class="menu-accordeon__item">
+            <h3 class="menu-accordeon__trigger menu-accordeon__trigger--meat menu-accordeon__trigger--active">Для мясоедов</h3>
+            <div class="menu-accordeon__discription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellendus laborum assumenda velit soluta quidem quaerat earum saepe optio ipsum eius, reiciendis vero expedita corporis, rem accusamus. Tenetur vero illo similique fugit error ullam. Quae illo adipisci iste eos numquam dolore ratione similique, optio quaerat dolorem enim delectus perspiciatis ipsa?
+            </div>
+          </li>
+          <li class="menu-accordeon__item">
+            <h3 class="menu-accordeon__trigger menu-accordeon__trigger--vegan">Вегетарианское</h3>
+            <div class="menu-accordeon__discription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, nihil inventore vel ipsam sequi labore et, voluptates nulla corrupti quas nostrum voluptatum animi architecto amet iste? Aperiam veritatis vero minus hic ut accusamus iusto similique velit porro accusantium architecto laboriosam possimus odit distinctio eum atque nostrum suscipit, rem earum necessitatibus?
+            </div>
+          </li>
+          <li class="menu-accordeon__item">
+            <h3 class="menu-accordeon__trigger menu-accordeon__trigger--diet">Диетическое</h3>
+            <div class="menu-accordeon__discription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, nihil inventore vel ipsam sequi labore et, voluptates nulla corrupti quas nostrum voluptatum animi architecto amet iste? Aperiam veritatis vero minus hic ut accusamus iusto similique velit porro accusantium architecto laboriosam possimus odit distinctio eum atque nostrum suscipit, rem earum necessitatibus?
+            </div>
+          </li>
+        </ul>
       </div>
 
 
@@ -286,68 +302,125 @@
 
     <section class="section order" id="order">
       <div class="container order__container">
-        <div class="order__content">
-          <h2 class="title order__title title--centered">Закажите доставку</h2>
-          <form action="" class="order__form" method="GET">
-            <div class="delivery-info">
-              <div class="delivery-info__contacts">
-                <div class="delivery-info__name">
-                  <p class="order__subtitle">Имя</p>
-                  <input type="text" class="delivery__name">
-                </div>
-                <div class="delivery-info__tel">
-                  <p class="order__subtitle">Телефон</p>
-                  <input type="text" class="delivery__tel">
-                </div>
+        <h2 class="title order__title title--centered">Закажите доставку</h2>
+        <form action="" class="order-form__elem">
+          <div class="order-form">
+            <div class="order-form__left">
+              <div class="order-form__row">
+                <label class="order-form__block">
+                  <div class="order-form__title">Имя</div>
+                  <input type="text" class="order-form__input">
+                </label>
+                <label class="order-form__block">
+                  <div class="order-form__title">Телефон</div>
+                  <input type="text" class="order-form__input">
+                </label>
               </div>
-              <div class="delivery-info__street">
-                <div class="delivery-info__str">
-                  <p class="order__subtitle"> Улица</p>
-                  <input type="text" class="delivery__street">
-                </div>
+              <div class="order-form__row">
+                <label class="order-form__block">
+                  <div class="order-form__title">Улица</div>
+                  <input type="text" class="order-form__input">
+                </label>
               </div>
-              <div class="delivery-info__address">
-                <div class="delivery-info__home">
-                  <p class="order__subtitle">Дом</p>
-                  <input type="text" class="delivery__home">
+              <div class="order-form__row">
+                  <label class="order-form__block">
+                    <div class="order-form__title">Дом</div>
+                    <input type="text" class="order-form__input">
+                  </label>
+                  <label class="order-form__block">
+                    <div class="order-form__title">Корпус</div>
+                    <input type="text" class="order-form__input">
+                  </label>
+                  <label class="order-form__block">
+                    <div class="order-form__title">Квартира</div>
+                    <input type="text" class="order-form__input">
+                  </label>
+                  <label class="order-form__block order-form__block--floor">
+                    <div class="order-form__title">Этаж</div>
+                    <input type="text" class="order-form__input">
+                  </label>
                 </div>
-                <div class="delivery-info__housing">
-                  <p class="order__subtitle">Корпус</p>
-                  <input type="text" class="delivery__housing">
+            </div>
+            <div class="order-form__right">
+              <div class="order-form__row">
+                <label class="order-form__block">
+                  <div class="order-form__title">Комментарий</div>
+                  <textarea name="comments" id="" class="order-form__textarea"></textarea>
+                </label>
+              </div>
+              <div class="order-form__row order-form__row--inline">
+                  <label class="order-form__block--inline">
+                    <input type="radio" name="payment" class="order-form__input--inline">
+                    <div class="order-form__title">Потребуется сдача</div>
+                  </label>
+                  <label class="order-form__block--inline">
+                    <input type="radio" name="payment" class="order-form__input--inline">
+                    <div class="order-form__title">Оплата по карте</div>
+                    </label>
                 </div>
-                <div class="delivery-info__flat">
-                  <p class="order__subtitle">Квартира</p>
-                  <input type="text" class="delivery__flat">
+                <div class="order-form__row order-form__row--inline">
+                  <label class="order-form__block--inline">
+                    <input type="checkbox" class="order-form__input--inline">
+                    <div class="order-form__title">Не перезванивать</div>
+                  </label>
                 </div>
-                <div class="delivery-info__floor">
-                  <p class="order__subtitle">Этаж</p>
-                  <input type="text" class="delivery__floor">
+                <div class="order-form__row order-form__row--inline">
+                  <label class="order-form__block--inline">
+                    <input type="button" class="btn btn__send" value="Заказать">
+                    <input type="reset" class="btn__reset" value="Очистить">
+                  </label>
                 </div>
               </div>
             </div>
-            <div class="order-info">
-              <div class="order-info__comments">
-                <p class="order__subtitle">Комментарий</p>
-                <textarea name="comments" id="" class="order__comments"></textarea>
-              </div>
-              <div class="order-info__payment">
-                <input type="radio" name="payment" class="order__cash">
-                <span class="order__subtitle">Потребуется сдача</span>
-                <input type="radio" name="payment" class="order__card">
-                <span class="order__subtitle">Оплата по карте</span>
-              </div>
-              <div class="order-info__nocall">
-                <input type="checkbox" class="order__nocall">
-                <span class="order__subtitle">Не перезванивать</span>
-              </div>
-              <div class="order-info__buttons">
-                <input type="button" class="btn btn__send" value="Заказать">
-                <input type="reset" class="btn__reset" value="Очистить">
-              </div>
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
+    </section>
+
+    <section class="section contacts" id="contacts">
+      <footer class="footer">
+        <div class="footer__contacts">
+          <h4 class="footer__address">г. Сыктывкар, ул. Бабушкина, д.5</h4>
+          <div class="footer__phone">
+            <svg class="phone-icon">
+              <use xlink:href="img/icons/sprite.svg#phone"></use>
+            </svg>
+            <span class="phone-number">+7 (8212) 240-240</span>
+          </div>
+        </div>
+        <div class="footer__socials">
+          <ul class="socials__link">
+            <li class="socials__item">
+              <a href="#" class="socials-icon socials-icon--vk">
+                <svg class="socials-icon__img">
+                  <use xlink:href="img/icons/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials-icon socials-icon--fb">
+                <svg class="socials-icon__img">
+                  <use xlink:href="img/icons/sprite.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials-icon socials-icon__in">
+                <svg class="socials-icon__img">
+                  <use xlink:href="img/icons/sprite.svg#in"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials-icon socials-icon--tw">
+                <svg class="socials-icon__img">
+                  <use xlink:href="img/icons/sprite.svg#tw"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </section>
 
     <aside class="sidebar">

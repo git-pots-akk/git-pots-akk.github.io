@@ -4,6 +4,7 @@ $white: #fff;
 $red: #e45028;
 $yellow: #ffcc33;
 $black: #2f3234;
+$grey: #5a5a5a;
 
 //normalize
 
@@ -11,6 +12,7 @@ $black: #2f3234;
 
 //adjustment
 
+@import "_misc/media";
 @import "_misc/fonts";
 @import "_misc/mixins";
 @import "_misc/layout";
@@ -26,3 +28,4 @@ $black: #2f3234;
 @import "blocks/team.scss";
 @import "blocks/order.scss";
 @import "blocks/menu.scss";
+@import "blocks/contacts.scss";

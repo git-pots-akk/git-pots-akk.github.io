@@ -15,6 +15,11 @@
       opacity: 1;
     }
   }
+
+  @include tablets {
+    flex-basis: 50%;
+    height: 25%;
+  }
 }
 
 .reviews__photo {
@@ -33,27 +38,35 @@ right: 0;
 bottom: 0;
 left: 0;
 background-color: rgba($black, .3);
-padding: 50px 20px;
+padding: 20% 10%;
 transition: opacity .4s;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
 
+@include tablets {
+  align-items: center;
+  padding: 5% 5%;
+}
 }
 
 .reviews__name {
   @include gagalin();
-  font-size: 14px;
+  font-size: rem(14px);
   text-transform: uppercase;
-  margin-bottom: 30px;
+  padding-bottom: 7%;
 }
 
 .reviews__text {
   @include ubuntu(Light);
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   overflow: hidden;
+
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .reviews__btn {

@@ -21,32 +21,56 @@
 }
 
 .wearebest__title {
-  margin-bottom: 55px;
+  margin-bottom: 8%;
 }
 
 .wearebest__list {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .wearebest__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-right: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+
+  @include phones {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .wearebest__subtitle {
   @include lifehack();
-  margin-top: 45px;
-  font-size: 24px;
+  font-size: rem(24px);
   color: $black;
   text-align: center;
+  padding-top: rem(45px);
+
+  @include phones {
+    text-align: left;
+    padding-left: 5%;
+  }
 }
 
 .wearebest__discription {
   @include ubuntu(Light);
-  margin-top: 30px;
-  font-size: 14px;
+  font-size: rem(14px);
   color: $black;
   text-align: center;
   line-height: 1.7;
+  padding-top: rem(30px);
+
+  @include phones {
+    text-align: left;
+    padding-left: 5%;
+  }
 }
