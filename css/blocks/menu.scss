@@ -8,10 +8,10 @@
 }
 
 .menu__title {
+  display: inline-block;
   position: absolute;
   top: 7%;
   left: 5%;
-
 }
 
 .menu-accordeon {
@@ -46,6 +46,16 @@
   transform: rotate(180deg);
   height: 100%;
   padding: rem(20px) rem(10px);
+
+  @include tablets {
+    font-size: rem(32px);
+    padding: rem(10px) rem(5px);
+  }
+
+  @include phones {
+    font-size: rem(24px);
+    padding: rem(7px) rem(3px);
+  }
 
   &:hover {
     cursor: pointer;
@@ -90,6 +100,18 @@
 }
 
 .menu-accordeon__trigger--active + .menu-accordeon__discription {
-  width: rem(400px);
+  width: rem(300px);
   padding: 10% 5%;
+
+  @include tablets {
+    max-width: 50%;
+    padding: 7% 3%;
+    font-size: rem(13px);
+  }
+
+  @include phones {
+    max-width: 25%;
+    padding: 5% 2%;
+    font-size: rem(12px);
+  }
 }

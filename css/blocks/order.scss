@@ -60,6 +60,7 @@
   &--inline {
     @include phones {
       justify-content: center;
+      margin-bottom: rem(20px);
     }
   }
 }
@@ -84,21 +85,96 @@
   }
 }
 
+.radio {
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+.radio__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: transparent;
+}
+
+.radio__box {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-left: -25px;
+}
+
+.radio__input:checked + .radio__box {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url(/img/icons/radio.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.check {
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: transparent;
+}
+
+.check__box {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: $white;
+  margin-left: -25px;
+}
+
+.check__input:checked + .check__box {
+  background-image: url(/img/icons/checkbox.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .order-form__input {
   width: 100%;
+  border-radius: rem(5px);
+  padding: rem(10px) rem(20px);
+  @include ubuntu(Light);
+  size: rem(14px);
+  color: $black;
+  border: rem(2px) solid transparent;
+  outline: none;
 
-  &--inline {
-  margin-right: rem(10px);
-  margin-bottom: rem(10px);
-  transform: scale(1.2);
-  cursor: pointer;
+  &:focus {
+    border: rem(2px) solid $yellow;
+    transition: .3s;
   }
 }
 
 .order-form__textarea {
   width: 100%;
-  height: rem(115px);
+  height: rem(125px);
   resize: none;
+  border-radius: rem(5px);
+  padding: rem(10px) rem(20px);
+  @include ubuntu(Light);
+  size: rem(14px);
+  color: $black;
+  border: rem(2px) solid transparent;
+  outline: none;
+
+  &:focus {
+    border: rem(2px) solid $yellow;
+    transition: .3s;
+  }
 }
 
 .order-form__title {
@@ -110,24 +186,14 @@
   line-height: 1;
 }
 
-.btn__send {
-
-  &:focus {
-    border: none;
-  }
-}
-
 .btn__reset {
-  background-color: inherit;
-  color: $white;
-  border: none;
+  background-color: transparent;
+  text-transform: inherit;
+  @include ubuntu(Light);
+  font-size: rem(14px);
 
   &:hover {
     cursor: pointer;
     text-decoration: underline;
-  }
-
-  &:focus {
-    border: none;
   }
 }

@@ -67,6 +67,15 @@ body {
   &--centered {
     text-align: center;
   }
+
+  @include tablets {
+    font-size: rem(64px);
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: rem(50px);
+  }
 }
 
 h1,
@@ -112,24 +121,4 @@ button {
   border: none;
   cursor: pointer;
   color: inherit;
-}
-
-input, textarea {
-  border-radius: rem(5px);
-  padding: rem(10px) rem(20px);
-  @include ubuntu(Light);
-  size: rem(14px);
-  color: $black;
-  border: none;
-  outline: none;
-
-  &:focus {
-    border: rem(2px) solid $yellow;
-    transition: .3s;
-  }
-}
-
-.icon {
-  width: rem(120px);
-  height: rem(100px);
 }

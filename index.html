@@ -10,9 +10,11 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <svg class="icon logo-icon">
-          <use xlink:href="img/icons/sprite.svg#logo"></use>
-        </svg>
+        <div class="header__logo">
+          <svg class="icon logo-icon">
+            <use xlink:href="img/icons/sprite.svg#logo"></use>
+          </svg>
+        </div>
         <div class="header__wrapper">
           <nav class="nav">
             <ul class="nav__list">
@@ -56,7 +58,9 @@
     <section class="section promo">
       <div class="container promo__container">
         <div class="promo__content">
-          <img class="promo__img" src="img/cnt/burger.png" alt="Фото бургера">
+          <div class="promo__img">
+            <img class="promo__img promo__img-pic" src="img/cnt/burger.png" alt="Фото бургера">
+          </div>
           <h1 class="title promo__title">
             Мы делаем
             <div class="promo__subtitle">натуральные бургеры</div>
@@ -76,7 +80,7 @@
           <ul class="wearebest__list">
             <li class="wearebest__item">
               <div class="wearebest__img">
-                  <svg class="icon meat-icon">
+                  <svg class="wearebest__icon">
                     <use xlink:href="img/icons/sprite.svg#meat"></use>
                   </svg>
               </div>
@@ -91,7 +95,7 @@
             </li>
             <li class="wearebest__item">
               <div class="wearebest__img">
-                <svg class="icon hand-icon">
+                <svg class="wearebest__icon">
                   <use xlink:href="img/icons/sprite.svg#hand"></use>
                 </svg>
               </div>
@@ -106,7 +110,7 @@
             </li>
             <li class="wearebest__item">
               <div class="wearebest__img">
-                <svg class="icon natural-icon">
+                <svg class="wearebest__icon">
                   <use xlink:href="img/icons/sprite.svg#natural"></use>
                 </svg>
               </div>
@@ -349,25 +353,28 @@
                 </label>
               </div>
               <div class="order-form__row order-form__row--inline">
-                  <label class="order-form__block--inline">
-                    <input type="radio" name="payment" class="order-form__input--inline">
+                  <label class="radio">
+                    <input type="radio" name="radio__payment" class="radio__input">
+                    <span class="radio__box"></span>
                     <div class="order-form__title">Потребуется сдача</div>
                   </label>
-                  <label class="order-form__block--inline">
-                    <input type="radio" name="payment" class="order-form__input--inline">
+                  <label class="radio">
+                    <input type="radio" name="radio__payment" class="radio__input">
+                    <span class="radio__box"></span>
                     <div class="order-form__title">Оплата по карте</div>
-                    </label>
+                  </label>
                 </div>
                 <div class="order-form__row order-form__row--inline">
-                  <label class="order-form__block--inline">
-                    <input type="checkbox" class="order-form__input--inline">
+                  <label class="check">
+                    <input type="checkbox" class="check__input">
+                    <span class="check__box"></span>
                     <div class="order-form__title">Не перезванивать</div>
                   </label>
                 </div>
                 <div class="order-form__row order-form__row--inline">
                   <label class="order-form__block--inline">
-                    <input type="button" class="btn btn__send" value="Заказать">
-                    <input type="reset" class="btn__reset" value="Очистить">
+                    <input type="button" class="btn btn__order" value="Заказать">
+                    <input type="reset" class="btn btn__reset" value="Очистить">
                   </label>
                 </div>
               </div>
