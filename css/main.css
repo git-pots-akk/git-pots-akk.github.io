@@ -881,13 +881,13 @@ button {
   position: relative;
   max-width: 100%;
   max-height: 100%; }
-  @media screen and (max-width: 768px) {
-    .wearebest__img {
-      max-width: 80%; } }
 
 .wearebest__icon {
   width: 8.75rem;
   height: 6.25rem; }
+  @media screen and (max-width: 768px) {
+    .wearebest__icon {
+      max-width: 90%; } }
 
 .wearebest__subtitle {
   font-family: 'Lifehack', sans-serif;
@@ -898,6 +898,7 @@ button {
   @media screen and (max-width: 480px) {
     .wearebest__subtitle {
       text-align: left;
+      padding-top: 1.875rem;
       padding-left: 5%; } }
 
 .wearebest__discription {
@@ -910,6 +911,7 @@ button {
   @media screen and (max-width: 480px) {
     .wearebest__discription {
       text-align: left;
+      padding-top: 1.25rem;
       padding-left: 5%; } }
 
 .team {
@@ -1064,6 +1066,9 @@ button {
 
 .order__title {
   margin-bottom: 3.4375rem; }
+  @media screen and (max-width: 768px) {
+    .order__title {
+      margin-bottom: 1.875rem; } }
 
 .order__container {
   display: -webkit-box;
@@ -1094,6 +1099,9 @@ button {
       -ms-flex-align: center;
       align-items: center;
       padding: 0 15%; } }
+  @media screen and (max-width: 480px) {
+    .order-form {
+      padding: 0 5%; } }
 
 .order-form__left {
   width: 50%;
@@ -1161,55 +1169,13 @@ button {
     .order-form__block--floor {
       display: none; } }
 
-.radio {
-  cursor: pointer;
-  padding-left: 25px; }
-
-.radio__input {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: transparent; }
-
-.radio__box {
-  position: absolute;
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #fff;
-  margin-left: -25px; }
-
-.radio__input:checked + .radio__box {
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-image: url(/img/icons/radio.png);
-  background-position: center center;
-  background-repeat: no-repeat; }
-
-.check {
-  cursor: pointer;
-  padding-left: 25px; }
-
-.check__input {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: transparent; }
-
-.check__box {
-  position: absolute;
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  margin-left: -25px; }
-
-.check__input:checked + .check__box {
-  background-image: url(/img/icons/checkbox.png);
-  background-position: center center;
-  background-repeat: no-repeat; }
+.order-form__title {
+  font-family: 'Ubuntu-Light', sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+  margin-right: 0.625rem;
+  margin-bottom: 0.625rem;
+  line-height: 1; }
 
 .order-form__input {
   width: 100%;
@@ -1225,6 +1191,9 @@ button {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
+  @media screen and (max-width: 480px) {
+    .order-form__input {
+      padding: 0.3125rem 0.625rem; } }
 
 .order-form__textarea {
   width: 100%;
@@ -1242,14 +1211,57 @@ button {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
+  @media screen and (max-width: 480px) {
+    .order-form__textarea {
+      height: 6.25rem;
+      padding: 0.3125rem 0.625rem; } }
 
-.order-form__title {
-  font-family: 'Ubuntu-Light', sans-serif;
-  font-size: 0.875rem;
-  color: #fff;
-  margin-right: 0.625rem;
-  margin-bottom: 0.625rem;
-  line-height: 1; }
+.radio {
+  cursor: pointer;
+  padding-left: 1.5625rem; }
+
+.radio__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: transparent; }
+
+.radio__box {
+  position: absolute;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: -1.5625rem; }
+
+.radio__input:checked + .radio__box {
+  background-image: url(/img/icons/radio.png);
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.check {
+  cursor: pointer;
+  padding-left: 1.5625rem; }
+
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: transparent; }
+
+.check__box {
+  position: absolute;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-left: -1.5625rem; }
+
+.check__input:checked + .check__box {
+  background-image: url(/img/icons/checkbox.png);
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 .btn__reset {
   background-color: transparent;
