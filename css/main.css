@@ -1222,9 +1222,13 @@ button {
 
 .radio__input {
   position: absolute;
-  -webkit-appearance: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  /* -webkit-appearance: none;
   -moz-appearance: none;
-  border: transparent; }
+  border: transparent; */ }
 
 .radio__box {
   position: absolute;
@@ -1245,9 +1249,13 @@ button {
 
 .check__input {
   position: absolute;
-  -webkit-appearance: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  /* -webkit-appearance: none;
   -moz-appearance: none;
-  border: transparent; }
+  border: transparent; */ }
 
 .check__box {
   position: absolute;
