@@ -44,10 +44,18 @@ display: flex;
 flex-direction: column;
 justify-content: flex-start;
 
-@include tablets {
+  @include tablets {
   align-items: center;
   padding: 5% 5%;
-}
+  }
+
+  @include phones {
+    justify-content: space-evenly;
+    padding: 20% 10%;
+    .reviews__text {
+      display: none;
+    }
+  }
 }
 
 .reviews__name {
@@ -55,6 +63,10 @@ justify-content: flex-start;
   font-size: rem(14px);
   text-transform: uppercase;
   padding-bottom: 7%;
+
+  @include phones {
+    font-size: rem(24px);
+  }
 }
 
 .reviews__text {
@@ -72,4 +84,17 @@ justify-content: flex-start;
 .reviews__btn {
   width: max-content;
   background-color: $black;
+
+  @include phones {
+    display: none;
+  }
+
+  &--phones {
+    display: none;
+
+    @include phones {
+      display: flex;
+    }
+  }
+
 }

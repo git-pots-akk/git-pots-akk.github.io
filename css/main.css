@@ -716,12 +716,23 @@ button {
       -ms-flex-align: center;
       align-items: center;
       padding: 5% 5%; } }
+  @media screen and (max-width: 480px) {
+    .reviews__hover {
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+      padding: 20% 10%; }
+      .reviews__hover .reviews__text {
+        display: none; } }
 
 .reviews__name {
   font-family: 'Gagalin', sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
   padding-bottom: 7%; }
+  @media screen and (max-width: 480px) {
+    .reviews__name {
+      font-size: 1.5rem; } }
 
 .reviews__text {
   font-family: 'Ubuntu-Light', sans-serif;
@@ -738,6 +749,16 @@ button {
   width: -moz-max-content;
   width: max-content;
   background-color: #2f3234; }
+  @media screen and (max-width: 480px) {
+    .reviews__btn {
+      display: none; } }
+  .reviews__btn--phones {
+    display: none; }
+    @media screen and (max-width: 480px) {
+      .reviews__btn--phones {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
 
 .sidebar {
   position: fixed;
