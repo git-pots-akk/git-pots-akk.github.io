@@ -1,0 +1,110 @@
+.burgers {
+  background-color: #ec9139;
+  position: relative;
+}
+
+.burgers__scroll-btn {
+  width: rem(29px);
+  height: rem(15px);
+  background-image: url('../img/icons/arrow-scroll.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
+  display: block;
+  position: absolute;
+
+  &--left {
+    bottom: 50%;
+    left: rem(40px);
+    transform: rotate(90deg);
+  }
+
+  &--right {
+    bottom: 50%;
+    right: rem(40px);
+    transform: rotate(-90deg);
+  }
+}
+
+.burgers__content {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.burgers__img {
+  width: 50%;
+}
+
+.burgers-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: rem(100px);
+  height: rem(100px);
+  stroke: $white;
+
+  &--up {
+    background-color: $red;
+    border-radius: 10%;
+  }
+}
+
+.burgers-icon__buns {
+  width: rem(60px);
+  height: rem(60px);
+}
+
+.burgers-icon_title {
+  @include gagalin();
+  color: $white;
+  font-size: rem(14px);
+  text-transform: uppercase;
+}
+
+.burgers-icon__kkal {
+  width: rem(60px);
+  height: rem(60px);
+}
+
+.burgers__img-pic {
+  width: rem(460px);
+}
+
+.burgers__description {
+  width: 50%;
+  margin-left: rem(30px);
+
+}
+
+.burgers__subtitle {
+  @include ubuntu(Light);
+  font-size: rem(14px);
+  color: $white;
+  line-height: 1.7;
+  padding-top: rem(50px);
+}
+
+.burgers__order {
+  display: flex;
+  align-items: baseline;
+  padding-top: rem(30px);
+}
+
+.burgers__price {
+  display: flex;
+  align-items: baseline;
+  @include gagalin();
+  font-size: rem(72px);
+  color: $red;
+}
+
+.burger__price-rub {
+  font-size: rem(42px);
+  margin-left: rem(15px);
+}
+
+.burgers__order-btn {
+  margin-left: rem(15px);
+}

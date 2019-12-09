@@ -458,7 +458,7 @@ button {
   position: absolute;
   width: 100%;
   padding-top: 0.75rem;
-  z-index: 1; }
+  z-index: 10; }
 
 .header__container {
   display: -webkit-box;
@@ -497,21 +497,21 @@ button {
   -ms-flex-align: center;
   align-items: center; }
 
-.ham-menu__link {
+.ham-menu__btn {
   vertical-align: middle;
   width: 1.875rem;
   height: 1.25rem;
   margin-left: 0.9375rem;
   display: none; }
   @media screen and (max-width: 768px) {
-    .ham-menu__link {
+    .ham-menu__btn {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
 
 .ham-menu__icon {
   stroke: #fff;
-  stroke-width: 0.3125rem;
+  stroke-width: 0.4375rem;
   width: 1.875rem;
   height: 1.25rem; }
 
@@ -778,6 +778,8 @@ button {
   margin-bottom: 0.125rem;
   position: relative; }
   .sidebar-menu__dot:active {
+    border-color: #fff; }
+  .sidebar-menu__dot:hover {
     border-color: #fff; }
   .sidebar-menu__dot:before {
     content: "";
@@ -1539,3 +1541,229 @@ button {
     .socials-icon__img {
       width: 2.1875rem;
       height: 1.5625rem; } }
+
+.hamburger {
+  background-color: #2f3234;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0; }
+
+.ham__logo {
+  position: absolute;
+  top: 0.9375rem;
+  left: 1.25rem;
+  z-index: 30; }
+  @media screen and (max-width: 480px) {
+    .ham__logo {
+      max-width: 80%; } }
+
+.ham-exit {
+  position: absolute;
+  top: 1.875rem;
+  right: 1.25rem;
+  z-index: 40; }
+
+.ham-exit__btn {
+  vertical-align: middle;
+  width: 3.75rem;
+  height: 2.5rem; }
+
+.ham-exit__icon {
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 0.125rem;
+  width: 3.75rem;
+  height: 2.5rem; }
+  @media screen and (max-width: 480px) {
+    .ham-exit__icon {
+      max-width: 80%; } }
+
+.ham-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 12.5rem; }
+  @media screen and (max-width: 480px) {
+    .ham-menu__list {
+      margin-top: 9.375rem; } }
+
+.ham-menu__item {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .ham-menu__item:after {
+    content: "";
+    width: 0.4375rem;
+    height: 0.4375rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 1.875rem; }
+    @media screen and (max-width: 480px) {
+      .ham-menu__item:after {
+        margin-bottom: 1.25rem; } }
+  .ham-menu__item:nth-last-child(1):after {
+    display: none; }
+
+.ham-menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Ubuntu-Regular', sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.625rem;
+  text-transform: uppercase;
+  margin-bottom: 1.875rem; }
+  .ham-menu__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+  @media screen and (max-width: 480px) {
+    .ham-menu__link {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem; } }
+
+.burgers {
+  background-color: #ec9139;
+  position: relative; }
+
+.burgers__scroll-btn {
+  width: 1.8125rem;
+  height: 0.9375rem;
+  background-image: url("../img/icons/arrow-scroll.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
+  display: block;
+  position: absolute; }
+  .burgers__scroll-btn--left {
+    bottom: 50%;
+    left: 2.5rem;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .burgers__scroll-btn--right {
+    bottom: 50%;
+    right: 2.5rem;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+.burgers__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+
+.burgers__img {
+  width: 50%; }
+
+.burgers-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  stroke: #fff; }
+  .burgers-icon--up {
+    background-color: #e45028;
+    border-radius: 10%; }
+
+.burgers-icon__buns {
+  width: 3.75rem;
+  height: 3.75rem; }
+
+.burgers-icon_title {
+  font-family: 'Gagalin', sans-serif;
+  color: #fff;
+  font-size: 0.875rem;
+  text-transform: uppercase; }
+
+.burgers-icon__kkal {
+  width: 3.75rem;
+  height: 3.75rem; }
+
+.burgers__img-pic {
+  width: 28.75rem; }
+
+.burgers__description {
+  width: 50%;
+  margin-left: 1.875rem; }
+
+.burgers__subtitle {
+  font-family: 'Ubuntu-Light', sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+  line-height: 1.7;
+  padding-top: 3.125rem; }
+
+.burgers__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  padding-top: 1.875rem; }
+
+.burgers__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  font-family: 'Gagalin', sans-serif;
+  font-size: 4.5rem;
+  color: #e45028; }
+
+.burger__price-rub {
+  font-size: 2.625rem;
+  margin-left: 0.9375rem; }
+
+.burgers__order-btn {
+  margin-left: 0.9375rem; }

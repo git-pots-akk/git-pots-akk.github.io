@@ -9,6 +9,42 @@
   </head>
   <body>
     <div class="wrapper">
+      
+      <div class="hamburger">
+        <div class="ham__logo">
+          <svg class="icon logo-icon">
+            <use xlink:href="img/icons/sprite.svg#logo"></use>
+          </svg>
+        </div>
+        <div class="ham-exit">
+          <a href="#" class="ham-exit__btn">
+            <svg class="ham-exit__icon">
+              <use xlink:href="img/icons/sprite.svg#ham_exit"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="ham-menu__list">
+          <li class="ham-menu__item">
+            <a href="#wearebest" class="ham-menu__link">О нас</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#burgers" class="ham-menu__link">Бургеры</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#team" class="ham-menu__link">Команда</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#menu" class="ham-menu__link">Меню</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#rewievs" class="ham-menu__link">Отзывы</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#contacts" class="ham-menu__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
       <header class="header">
         <div class="container header__container">
           <div class="header__logo">
@@ -45,8 +81,8 @@
             <div class="header__order-btn">
               <a href="#order" class="btn">Заказать</a>
             </div>
-            <div class="ham-menu">
-              <a href="#" class="ham-menu__link">
+            <div class="ham-menu__img">
+              <a href="#" class="ham-menu__btn">
                 <svg class="ham-menu__icon">
                   <use xlink:href="img/icons/sprite.svg#ham_menu"></use>
                 </svg>
@@ -125,6 +161,44 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section burgers">
+        <a href="#" class="burgers__scroll-btn burgers__scroll-btn--left" aria-label="Предыдущий слайдер с бургером"></a>
+        <a href="#" class="burgers__scroll-btn burgers__scroll-btn--right" aria-label="Следующий слайдер с бургером"></a>
+        <div class="container burgers__container">
+          <div class="burgers__content">
+            <div class="burgers__img">
+              <div class="burgers-icon burgers-icon--up">
+                <svg class="burgers-icon__buns">
+                  <use xlink:href="img/icons/sprite.svg#buns"></use>
+                </svg>
+                <span class="burgers-icon_title">Состав</span>
+              </div>
+              <img class="burgers__img-pic" src="img/burgers/black.png" alt="Черный бургер">
+              <div class="burgers-icon">
+                  <svg class="burgers-icon__kkal">
+                    <use xlink:href="img/icons/sprite.svg#kkal"></use>
+                  </svg>
+                  <span class="burgers-icon_title">Ккал</span>
+                </div>
+            </div>
+            <div class="burgers__description">
+              <h2 class="title burgers__title title--color--white">Dark beef burger</h2>
+              <div class="burgers__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere animi veritatis expedita consequuntur, assumenda quia omnis pariatur voluptatem, quasi explicabo iste ipsum earum voluptas. Cum ipsa deserunt reiciendis eligendi possimus.
+                <div class="burgers__order">
+                  <h3 class="burgers__price">
+                    500
+                    <div class="burger__price-rub">рублей</div>
+                  </h3>
+                  <form class="burgers__order-btn" action="">
+                    <input type="submit" class="btn burgers__order-btn" value="Заказать">
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -390,54 +464,54 @@
               </div>
             </div>
           </form>
-        </div>
       </section>
-  
+        
       <section class="section contacts" id="contacts">
-        <footer class="footer">
-          <div class="footer__contacts">
-            <h4 class="footer__address">г. Сыктывкар, ул. Бабушкина, д.5</h4>
-            <div class="footer__phone">
-              <svg class="phone-icon">
-                <use xlink:href="img/icons/sprite.svg#phone"></use>
-              </svg>
-              <span class="phone-number">+7 (8212) 240-240</span>
+          <footer class="footer">
+            <div class="footer__contacts">
+              <h4 class="footer__address">г. Сыктывкар, ул. Бабушкина, д.5</h4>
+              <div class="footer__phone">
+                <svg class="phone-icon">
+                  <use xlink:href="img/icons/sprite.svg#phone"></use>
+                </svg>
+                <span class="phone-number">+7 (8212) 240-240</span>
+              </div>
             </div>
-          </div>
-          <div class="footer__socials">
-            <ul class="socials__link">
-              <li class="socials__item">
-                <a href="#" class="socials-icon socials-icon--vk">
-                  <svg class="socials-icon__img">
-                    <use xlink:href="img/icons/sprite.svg#vk"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a href="#" class="socials-icon socials-icon--fb">
-                  <svg class="socials-icon__img">
-                    <use xlink:href="img/icons/sprite.svg#fb"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a href="#" class="socials-icon socials-icon__in">
-                  <svg class="socials-icon__img">
-                    <use xlink:href="img/icons/sprite.svg#in"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a href="#" class="socials-icon socials-icon--tw">
-                  <svg class="socials-icon__img">
-                    <use xlink:href="img/icons/sprite.svg#tw"></use>
-                  </svg>
-                </a>
-              </li>
+            <div class="footer__socials">
+              <ul class="socials__link">
+                <li class="socials__item">
+                  <a href="#" class="socials-icon socials-icon--vk">
+                    <svg class="socials-icon__img">
+                      <use xlink:href="img/icons/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#" class="socials-icon socials-icon--fb">
+                    <svg class="socials-icon__img">
+                      <use xlink:href="img/icons/sprite.svg#fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#" class="socials-icon socials-icon__in">
+                    <svg class="socials-icon__img">
+                      <use xlink:href="img/icons/sprite.svg#in"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#" class="socials-icon socials-icon--tw">
+                    <svg class="socials-icon__img">
+                      <use xlink:href="img/icons/sprite.svg#tw"></use>
+                    </svg>
+                  </a>
+                </li>
             </ul>
           </div>
         </footer>
       </section>
+    </div>
   
       <aside class="sidebar">
         <ul class="sidebar-menu">
@@ -467,6 +541,8 @@
             </li>
           </ul>
       </aside>
-    </div>
-  </body>
+
+      <script defer src="js/main.js"></script>
+
+    </body>
   </html>
