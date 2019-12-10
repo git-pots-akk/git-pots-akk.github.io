@@ -166,28 +166,69 @@
       </section>
 
       <section class="section burgers">
-        <a href="#" class="burgers__scroll-btn burgers__scroll-btn--left" aria-label="Предыдущий слайдер с бургером"></a>
-        <a href="#" class="burgers__scroll-btn burgers__scroll-btn--right" aria-label="Следующий слайдер с бургером"></a>
         <div class="container burgers__container">
+            <a href="#" class="burgers__scroll-btn burgers__scroll-btn--left" aria-label="Предыдущий слайдер с бургером"></a>
+            <a href="#" class="burgers__scroll-btn burgers__scroll-btn--right" aria-label="Следующий слайдер с бургером"></a>
           <div class="burgers__content">
             <div class="burgers__img">
-              <div class="burgers-icon burgers-icon--up">
-                <svg class="burgers-icon__buns">
-                  <use xlink:href="img/icons/sprite.svg#buns"></use>
-                </svg>
-                <span class="burgers-icon_title">Состав</span>
-              </div>
-              <img class="burgers__img-pic" src="img/burgers/black.png" alt="Черный бургер">
-              <div class="burgers-icon">
+              <div class="burgers__img-icons">
+                <div class="burgers-icon_buns">
+                  <div class="burgers-icon burgers-icon--up">
+                    <a href="#" class="burgers-composition__link">
+                      <svg class="burgers-icon__buns">
+                        <use xlink:href="img/icons/sprite.svg#buns"></use>
+                      </svg>
+                      <span class="burgers-icon_title">Состав</span>
+                    </a>
+                  </div>
+  
+                  <div class="burgers-composition">
+                    <div class="composition__item">
+                      <img src="img/icons/beef.svg" alt="">
+                      <span class="composition__title">Говядина</span>
+                      <span class="composition__weight">300г</span>
+                    </div>
+                    <div class="composition__item">
+                      <img class="composition__img" src="img/icons/buns.svg" alt="">
+                      <span class="composition__title">Булочки</span>
+                      <span class="composition__weight">100г</span>
+                    </div>
+                    <div class="composition__item">
+                      <img class="composition__img" src="img/icons/salad.svg" alt="">
+                      <span class="composition__title">Зелень</span>
+                      <span class="composition__weight">70г</span>
+                    </div>
+                    <div class="composition__item">
+                      <img class="composition__img" src="img/icons/sauce.svg" alt="">
+                      <span class="composition__title">Соус</span>
+                      <span class="composition__weight">150г</span>
+                    </div>
+                    <div class="composition__item">
+                      <img class="composition__img" src="img/icons/cucumber.svg" alt="">
+                      <span class="composition__title">Овощи</span>
+                      <span class="composition__weight">200г</span>
+                    </div>
+                    <div class="composition__item">
+                      <img class="composition__img" src="img/icons/cheese.svg" alt="">
+                      <span class="composition__title">Сыр</span>
+                      <span class="composition__weight">80г</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="burgers-icon burgers-icon--down">
                   <svg class="burgers-icon__kkal">
                     <use xlink:href="img/icons/sprite.svg#kkal"></use>
                   </svg>
-                  <span class="burgers-icon_title">Ккал</span>
+                  <span class="burgers-icon_title burgers-icon_title--number">1200</span>
+                  <span class="burgers-icon_title burgers-icon_title--kkal">Ккал</span>
                 </div>
+              </div>
+              <img class="burgers__img-pic" src="img/burgers/black.png" alt="Черный бургер">
             </div>
             <div class="burgers__description">
               <h2 class="title burgers__title title--color--white">Dark beef burger</h2>
-              <div class="burgers__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere animi veritatis expedita consequuntur, assumenda quia omnis pariatur voluptatem, quasi explicabo iste ipsum earum voluptas. Cum ipsa deserunt reiciendis eligendi possimus.
+              <div class="burgers__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugiat repellat, ex ullam fugit hic incidunt rerum maxime vitae minima?
                 <div class="burgers__order">
                   <h3 class="burgers__price">
                     500
@@ -455,10 +496,10 @@
                     </label>
                   </div>
                   <div class="order-form__row order-form__row--inline">
-                    <label class="order-form__block--inline">
+                    <div class="order-form__block--inline">
                       <input type="submit" class="btn btn__order" value="Заказать">
                       <input type="reset" class="btn btn__reset" value="Очистить">
-                    </label>
+                    </div>
                   </div>
                 </div>
               </div>

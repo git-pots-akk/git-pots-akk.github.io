@@ -19,7 +19,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  left: 78%;
+  left: 0;
   height: 100%;
 }
 
@@ -100,7 +100,8 @@
 }
 
 .menu-accordeon__trigger--active + .menu-accordeon__discription {
-  width: rem(300px);
+  width: 100%;
+  max-width: 30%;
   padding: 10% 5%;
 
   @include tablets {
@@ -110,8 +111,8 @@
   }
 
   @include phones {
-    max-width: 25%;
-    padding: 5% 2%;
+    max-width: 100%;
+    padding: 10% 5%;
     font-size: rem(12px);
   }
 }

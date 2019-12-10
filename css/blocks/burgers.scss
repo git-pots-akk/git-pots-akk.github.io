@@ -3,6 +3,16 @@
   position: relative;
 }
 
+.burgers__container {
+  padding: 0 5%;
+}
+
+.burgers__content {
+  width: 100%;
+  position: relative;
+}
+
+
 .burgers__scroll-btn {
   width: rem(29px);
   height: rem(15px);
@@ -15,25 +25,60 @@
 
   &--left {
     bottom: 50%;
-    left: rem(40px);
+    left: 0;
     transform: rotate(90deg);
   }
 
   &--right {
     bottom: 50%;
-    right: rem(40px);
+    right: 0;
     transform: rotate(-90deg);
   }
 }
 
 .burgers__content {
   display: flex;
-  align-items: center;
   position: relative;
+  margin: 0 rem(30px);
+  align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .burgers__img {
   width: 50%;
+  height: 100%;
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  @include phones {
+    justify-content: space-between;
+  }
+}
+
+.burgers__img-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: rem(-150px);
+
+  @include tablets {
+    flex-direction: row;
+    margin-right: 0;
+    width: 100%;
+    padding: 0 10%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
 }
 
 .burgers-icon {
@@ -59,37 +104,144 @@
 .burgers-icon_title {
   @include gagalin();
   color: $white;
-  font-size: rem(14px);
+  font-size: rem(16px);
   text-transform: uppercase;
+
+  &--number {
+    font-size: rem(24px);
+    margin-top: rem(-45px);
+  }
+
+  &--kkal {
+    margin-top: rem(15px);
+  }
 }
 
 .burgers-icon__kkal {
-  width: rem(60px);
-  height: rem(60px);
+  width: rem(100px);
+  height: rem(100px);
+}
+
+.burgers-icon_buns {
+  display: flex;
+}
+
+.burgers-composition__link {
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.burgers-composition {
+  display: none;
+  flex-direction: column;
+  background-color: rgba($white, 0.8);
+  border-radius: 3%;
+  padding: rem(20px);
+  z-index: 50;
+
+  @include tablets {
+    padding: rem(10px);
+  }
+}
+
+.composition__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(15px);
+
+  &:nth-child(1) {
+    padding-top: 0;
+  }
+  
+  @include tablets {
+    padding-top: rem(5px);
+  }
+}
+
+.composition__img {
+  width: rem(50px);
+  height: rem(40px);
+}
+
+.composition__title {
+  @include ubuntu(Medium);
+  font-size: rem(14px);
+  line-height: 1.7;
+  color: $black;
+  padding-left: rem(25px);
+}
+
+.composition__weight {
+  @include ubuntu(Light);
+  font-size: rem(14px);
+  line-height: 1.7;
+  color: $black;
+  padding-left: rem(60px);
 }
 
 .burgers__img-pic {
-  width: rem(460px);
+  width: rem(500px);
+  padding: rem(100px) 0;
+
+  @include tablets {
+    max-width: 80%;
+    padding: 0;
+  }
 }
 
 .burgers__description {
   width: 50%;
   margin-left: rem(30px);
 
+  @include tablets {
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+    margin-top: rem(20px);
+  }
+}
+
+.burgers__title {
+  @include tablets {
+    font-size: rem(63px);
+    padding: 0 rem(50px);
+  }
+  @include phones {
+    font-size: rem(50px);
+    padding: 0 rem(25px);
+  }
 }
 
 .burgers__subtitle {
+  display: flex;
+  flex-direction: column;
   @include ubuntu(Light);
   font-size: rem(14px);
   color: $white;
   line-height: 1.7;
   padding-top: rem(50px);
+
+  @include tablets {
+    text-align: center;
+    align-items: center;
+    padding: rem(25px) 0 0;
+  }
+
+  @include phones {
+    padding: rem(10px) 0 0;
+  }
 }
 
 .burgers__order {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   padding-top: rem(30px);
+
+  @include tablets {
+    padding-top: rem(15px);
+  }
 }
 
 .burgers__price {
@@ -97,12 +249,22 @@
   align-items: baseline;
   @include gagalin();
   font-size: rem(72px);
+  line-height: 1;
   color: $red;
+
+  @include tablets {
+    font-size: rem(63px);
+  }
 }
 
 .burger__price-rub {
-  font-size: rem(42px);
-  margin-left: rem(15px);
+  font-size: rem(32px);
+  margin-left: rem(10px);
+
+  @include tablets {
+    font-size: rem(24px);
+    margin-left: rem(5px);
+  }
 }
 
 .burgers__order-btn {
