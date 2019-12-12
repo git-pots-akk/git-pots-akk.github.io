@@ -53,7 +53,30 @@ hamburgerMenu.addEventListener('click', function(e) {
   }
 });
 
-/* js for Accordeon-menu */
+
+/* js for team-Accordeon */
+
+const teamAccTrigger = document.querySelectorAll('.team-accordeon__trigger');
+const teamAccItem = document.querySelectorAll('.team-accordeon__item');
+const teamAccList = document.querySelector('.team-accordeon__list');
+const team  = document.querySelector('.team');
+  
+for (let i = 0; i < teamAccItem.length; i++) {
+  teamAccItem[i].addEventListener('click', function(e) {
+    e.preventDefault();
+    for (let a = 0; a < teamAccTrigger.length; a++) {
+      teamAccTrigger[a].classList.remove('team-accordeon__trigger--active');
+    }
+    if (teamAccTrigger[i].classList.contains('team-accordeon__trigger--active')) {
+      teamAccTrigger[i].classList.remove('team-accordeon__trigger--active');
+    } else {
+      teamAccTrigger[i].classList.add('team-accordeon__trigger--active');
+    }
+  });
+};
+
+
+/* js for menu-Accordeon */
 
 const menuAccTrigger = document.querySelectorAll('.menu-accordeon__trigger');
 const menuAccItem = document.querySelectorAll('.menu-accordeon__item');

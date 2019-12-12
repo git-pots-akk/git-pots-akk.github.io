@@ -1328,11 +1328,7 @@ button {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  height: 100%;
-  background-color: rgba(47, 50, 52, 0.8);
-  -webkit-transition: width 1s;
-  -o-transition: width 1s;
-  transition: width 1s; }
+  height: 100%; }
 
 .menu-accordeon__trigger {
   font-family: 'Gagalin', sans-serif;
