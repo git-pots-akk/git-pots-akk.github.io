@@ -64,13 +64,13 @@ const team  = document.querySelector('.team');
 for (let i = 0; i < teamAccItem.length; i++) {
   teamAccItem[i].addEventListener('click', function(e) {
     e.preventDefault();
-    for (let a = 0; a < teamAccTrigger.length; a++) {
-      teamAccTrigger[a].classList.remove('team-accordeon__trigger--active');
-    }
     if (teamAccTrigger[i].classList.contains('team-accordeon__trigger--active')) {
       teamAccTrigger[i].classList.remove('team-accordeon__trigger--active');
     } else {
-      teamAccTrigger[i].classList.add('team-accordeon__trigger--active');
+      for (let a = 0; a < teamAccTrigger.length; a++) {
+        teamAccTrigger[a].classList.remove('team-accordeon__trigger--active');
+        teamAccTrigger[i].classList.add('team-accordeon__trigger--active');
+      }
     }
   });
 };
@@ -86,13 +86,13 @@ const menu  = document.querySelector('.menu');
 for (let i = 0; i < menuAccItem.length; i++) {
   menuAccItem[i].addEventListener('click', function(e) {
     e.preventDefault();
-    for (let a = 0; a < menuAccTrigger.length; a++) {
-      menuAccTrigger[a].classList.remove('menu-accordeon__trigger--active');
-    }
     if (menuAccTrigger[i].classList.contains('menu-accordeon__trigger--active')) {
       menuAccTrigger[i].classList.remove('menu-accordeon__trigger--active');
     } else {
-      menuAccTrigger[i].classList.add('menu-accordeon__trigger--active');
+      for (let a = 0; a < menuAccTrigger.length; a++) {
+        menuAccTrigger[a].classList.remove('menu-accordeon__trigger--active');
+        menuAccTrigger[i].classList.add('menu-accordeon__trigger--active');
+      }
     }
   });
 };

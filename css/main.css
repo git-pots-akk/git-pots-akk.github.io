@@ -1297,13 +1297,16 @@ button {
   position: absolute;
   top: 7%;
   left: 5%; }
+  @media screen and (max-width: 480px) {
+    .menu__title {
+      display: none; } }
 
 .menu-accordeon {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 30%;
+  left: 50%;
   height: 100%; }
   @media screen and (max-width: 480px) {
     .menu-accordeon {
@@ -1346,14 +1349,6 @@ button {
   transform: rotate(180deg);
   height: 100%;
   padding: 1.25rem 0.625rem; }
-  @media screen and (max-width: 768px) {
-    .menu-accordeon__trigger {
-      font-size: 2rem;
-      padding: 0.625rem 0.3125rem; } }
-  @media screen and (max-width: 480px) {
-    .menu-accordeon__trigger {
-      font-size: 1.5rem;
-      padding: 0.4375rem 0.1875rem; } }
   .menu-accordeon__trigger:hover {
     cursor: pointer;
     -webkit-transition: 1s;
@@ -1374,6 +1369,12 @@ button {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    .menu-accordeon__trigger {
+      font-size: 2rem; } }
+  @media screen and (max-width: 480px) {
+    .menu-accordeon__trigger {
+      font-size: 1.75rem; } }
 
 .menu-accordeon__discription {
   font-family: 'Ubuntu-Light', sans-serif;
@@ -1383,24 +1384,24 @@ button {
   height: 100%;
   width: 0;
   overflow: hidden;
-  background-color: rgba(47, 50, 52, 0.8); }
+  background-color: rgba(47, 50, 52, 0.8);
+  -webkit-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s; }
 
 .menu-accordeon__trigger--active {
   color: #ffcc33; }
 
 .menu-accordeon__trigger--active + .menu-accordeon__discription {
-  width: 100%;
-  -webkit-transition: width 1s;
-  -o-transition: width 1s;
-  transition: width 1s;
+  width: 21.875rem;
   padding: 10% 5%; }
   @media screen and (max-width: 768px) {
     .menu-accordeon__trigger--active + .menu-accordeon__discription {
-      padding: 7% 3%;
+      width: 9.375rem;
       font-size: 0.8125rem; } }
   @media screen and (max-width: 480px) {
     .menu-accordeon__trigger--active + .menu-accordeon__discription {
-      padding: 10% 5%;
+      width: 100%;
       font-size: 0.75rem; } }
 
 .contacts {

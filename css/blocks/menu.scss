@@ -12,6 +12,10 @@
   position: absolute;
   top: 7%;
   left: 5%;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .menu-accordeon {
@@ -19,7 +23,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  left: 30%;
+  left: 50%;
   height: 100%;
 
   @include phones {
@@ -51,16 +55,6 @@
   height: 100%;
   padding: rem(20px) rem(10px);
 
-  @include tablets {
-    font-size: rem(32px);
-    padding: rem(10px) rem(5px);
-  }
-
-  @include phones {
-    font-size: rem(24px);
-    padding: rem(7px) rem(3px);
-  }
-
   &:hover {
     cursor: pointer;
     transition: 1s;
@@ -85,6 +79,14 @@
     background-position: center center;
     background-repeat: no-repeat;
   }
+
+  @include tablets {
+    font-size: rem(32px);
+  }
+
+  @include phones {
+    font-size: rem(28px);
+  }
 }
 
 .menu-accordeon__discription {
@@ -96,6 +98,7 @@
   width: 0;
   overflow: hidden;
   background-color: rgba($black, 0.8);
+  transition: width 1s;
 }
 
 .menu-accordeon__trigger--active {
@@ -103,17 +106,16 @@
 }
 
 .menu-accordeon__trigger--active + .menu-accordeon__discription {
-  width: 100%;
-  transition: width 1s;
+  width: rem(350px);
   padding: 10% 5%;
 
   @include tablets {
-    padding: 7% 3%;
+    width: rem(150px);
     font-size: rem(13px);
   }
 
   @include phones {
-    padding: 10% 5%;
+    width: 100%;
     font-size: rem(12px);
   }
 }
