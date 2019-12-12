@@ -38,6 +38,8 @@
   align-items: center;
   justify-content: flex-end;
   height: 100%;
+  background-color: rgba($black, 0.8);
+  transition: width 1s;
 }
 
 .menu-accordeon__trigger {
@@ -96,7 +98,6 @@
   width: 0;
   overflow: hidden;
   background-color: rgba($black, 0.8);
-  transition: width 1s;
 }
 
 .menu-accordeon__trigger--active {
@@ -105,7 +106,7 @@
 
 .menu-accordeon__trigger--active + .menu-accordeon__discription {
   width: 100%;
-  max-width: 100%;
+  transition: width 1s;
   padding: 10% 5%;
 
   @include tablets {
