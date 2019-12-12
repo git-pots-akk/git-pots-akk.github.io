@@ -58,10 +58,14 @@ hamburgerMenu.addEventListener('click', function(e) {
 const menuAccTrigger = document.querySelectorAll('.menu-accordeon__trigger');
 const menuAccItem = document.querySelectorAll('.menu-accordeon__item');
 const menuAccList = document.querySelector('.menu-accordeon__list');
-
+const menu  = document.querySelector('.menu');
+  
 for (let i = 0; i < menuAccItem.length; i++) {
   menuAccItem[i].addEventListener('click', function(e) {
     e.preventDefault();
+    for (let a = 0; a < menuAccTrigger.length; a++) {
+      menuAccTrigger[a].classList.remove('menu-accordeon__trigger--active');
+    }
     if (menuAccTrigger[i].classList.contains('menu-accordeon__trigger--active')) {
       menuAccTrigger[i].classList.remove('menu-accordeon__trigger--active');
     } else {
