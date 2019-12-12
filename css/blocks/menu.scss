@@ -19,8 +19,12 @@
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 30%;
   height: 100%;
+
+  @include phones {
+    left: 0;
+  }
 }
 
 .menu-accordeon__list {
@@ -101,17 +105,15 @@
 
 .menu-accordeon__trigger--active + .menu-accordeon__discription {
   width: 100%;
-  max-width: 30%;
+  max-width: 100%;
   padding: 10% 5%;
 
   @include tablets {
-    max-width: 50%;
     padding: 7% 3%;
     font-size: rem(13px);
   }
 
   @include phones {
-    max-width: 100%;
     padding: 10% 5%;
     font-size: rem(12px);
   }

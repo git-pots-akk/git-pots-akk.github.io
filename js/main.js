@@ -1,3 +1,5 @@
+/* js for Hamburger-menu */
+
 const openMenu = document.querySelector('.ham-menu__img');
 const hamburgerMenu = document.querySelector('.hamburger');
 const closeMenu = document.querySelector('.ham-exit__btn');
@@ -14,7 +16,6 @@ let increaseOp = function() {
     }
   }, 100);
 }
-
 
 openMenu.addEventListener('click', function(e){
   e.preventDefault();
@@ -51,3 +52,20 @@ hamburgerMenu.addEventListener('click', function(e) {
     decreaseOp();
   }
 });
+
+/* js for Accordeon-menu */
+
+const menuAccTrigger = document.querySelectorAll('.menu-accordeon__trigger');
+const menuAccItem = document.querySelectorAll('.menu-accordeon__item');
+const menuAccList = document.querySelector('.menu-accordeon__list');
+
+for (let i = 0; i < menuAccItem.length; i++) {
+  menuAccItem[i].addEventListener('click', function(e) {
+    e.preventDefault();
+    if (menuAccTrigger[i].classList.contains('menu-accordeon__trigger--active')) {
+      menuAccTrigger[i].classList.remove('menu-accordeon__trigger--active');
+    } else {
+      menuAccTrigger[i].classList.add('menu-accordeon__trigger--active');
+    }
+  });
+};
