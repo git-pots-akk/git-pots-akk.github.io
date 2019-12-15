@@ -32,16 +32,16 @@
 
 .ham-exit__btn {
   vertical-align: middle;
-  width: rem(60px);
-  height: rem(40px);
+  width: rem(50px);
+  height: rem(30px);
 }
 
 .ham-exit__icon {
   fill: $white;
   stroke: $white;
   stroke-width: rem(2px);
-  width: rem(60px);
-  height: rem(40px);
+  width: rem(50px);
+  height: rem(30px);
 
   @include phones {
     max-width: 80%;

@@ -53,6 +53,29 @@ hamburgerMenu.addEventListener('click', function(e) {
   }
 });
 
+/* js for burgers-slider */
+
+const right = document.querySelector('.burgers__scroll-btn--right');
+const left = document.querySelector('.burgers__scroll-btn--left');
+const burgerSlider = document.querySelector('.burgers__sliders');
+
+right.addEventListener('click', function(e) {
+  loop('right', e);
+});
+
+left.addEventListener('click', function(e) {
+  loop('left', e);
+});
+
+function loop(direction, e) {
+  e.preventDefault();
+  if (direction === 'right') {
+    burgerSlider.appendChild(burgerSlider.firstElementChild);
+  } else if (direction === 'left') {
+    burgerSlider.insertBefore(burgerSlider.lastElementChild, burgerSlider.firstElementChild);
+  };
+};
+
 
 /* js for team-Accordeon */
 
