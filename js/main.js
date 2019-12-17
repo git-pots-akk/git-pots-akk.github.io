@@ -140,27 +140,28 @@ sendOrder.addEventListener('click', function(e) {
   if (validateForm(orderForm)) {
 
     var formData = new FormData();
-    formData.append("name", orderForm.elements.name.value);
-    formData.append("phone", orderForm.elements.phone.value);
-    formData.append("email", orderForm.elements.to.value);
-    formData.append("comment", orderForm.elements.comment.value);
+    formData.append('name', orderForm.elements.name.value);
+    formData.append('phone', orderForm.elements.phone.value);
+    formData.append('comment', orderForm.elements.comment.value);
+    formData.append('to', 'email@mail.com');
 
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
-    xhr.send(JSON.stringify(formData));
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
     xhr.addEventListener('load', function() {
     });
-    overlayOrder.style.display = "flex";
+    overlayOrder.style.display = 'flex';
+    console.log(xhr.response.status);
   } else {
-    overlayOrder.style.display = "flex";
+    overlayOrder.style.display = 'flex';
     orderMessage.textContent = 'Сообщение не отправлено';
   }
 });
 
 overlayClose.addEventListener('click', function(e) {
   e.preventDefault();
-  overlayOrder.style.display = "none";
+  overlayOrder.style.display = 'none';
 });
 
 overlayOrder.addEventListener('click', function(e) {
