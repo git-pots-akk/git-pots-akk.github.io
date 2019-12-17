@@ -806,17 +806,23 @@
       <section class="section order" id="order">
         <div class="container order__container">
           <h2 class="title order__title title--centered">Закажите доставку</h2>
-          <form action="" class="order-form__elem">
+          <form class="order-form__elem" id="order-form">
             <div class="order-form">
               <div class="order-form__left">
                 <div class="order-form__row">
                   <label class="order-form__block">
                     <div class="order-form__title">Имя</div>
-                    <input type="text" class="order-form__input">
+                    <input type="text" class="order-form__input" name="name" required>
                   </label>
                   <label class="order-form__block">
                     <div class="order-form__title">Телефон</div>
-                    <input type="text" class="order-form__input">
+                    <input type="text" class="order-form__input" name="phone" required>
+                  </label>
+                </div>
+                <div class="order-form__row">
+                  <label class="order-form__block">
+                    <div class="order-form__title">Электронная почта</div>
+                    <input type="email" class="order-form__input" name="to" required>
                   </label>
                 </div>
                 <div class="order-form__row">
@@ -848,7 +854,7 @@
                 <div class="order-form__row">
                   <label class="order-form__block">
                     <div class="order-form__title">Комментарий</div>
-                    <textarea name="comments" id="" class="order-form__textarea"></textarea>
+                    <textarea name="comment" class="order-form__textarea" required></textarea>
                   </label>
                 </div>
                 <div class="order-form__row order-form__row--inline">
@@ -872,7 +878,7 @@
                   </div>
                   <div class="order-form__row order-form__row--inline">
                     <div class="order-form__block--inline">
-                      <input type="submit" class="btn btn__order" value="Заказать">
+                      <input type="submit" class="btn btn__order" value="Заказать" id="send-order">
                       <input type="reset" class="btn btn__reset" value="Очистить">
                     </div>
                   </div>

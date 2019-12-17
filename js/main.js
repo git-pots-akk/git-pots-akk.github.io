@@ -119,3 +119,53 @@ for (let i = 0; i < menuAccItem.length; i++) {
     }
   });
 };
+
+/* js for order-form */
+
+const orderForm = document.querySelector('#order-form');
+const sendOrder = document.querySelector('#send-order');
+
+sendOrder.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  if (validateForm(orderForm)) {
+
+    var formData = new FormData();
+    formData.append("name", orderForm.elements.name.value);
+    formData.append("phone", orderForm.elements.phone.value);
+    formData.append("email", orderForm.elements.to.value);
+    formData.append("comment", orderForm.elements.comment.value);
+
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+    xhr.send(JSON.stringify(formData));
+    xhr.addEventListener('load', function() {
+      console.log(xhr.status);
+    });
+  }
+});
+
+function validateForm(form) {
+  let valid = true;
+
+  if (!validateField(form.elements.name)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.to)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.comment)) {
+    valid = false;
+  }
+
+  return valid;
+}
+
+function validateField(field) {
+  /* field.textContent = field.validationMessage; */
+  return field.checkValidity();
+}
