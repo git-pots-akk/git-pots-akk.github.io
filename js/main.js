@@ -124,6 +124,9 @@ for (let i = 0; i < menuAccItem.length; i++) {
 
 const orderForm = document.querySelector('#order-form');
 const sendOrder = document.querySelector('#send-order');
+const overlayOrder = document.querySelector('.overlay-order');
+const overlayClose = document.querySelector('.order-exit__btn');
+let orderMessage = document.querySelector('.overlay-order__message');
 
 sendOrder.addEventListener('click', function(e) {
   e.preventDefault();
@@ -141,8 +144,22 @@ sendOrder.addEventListener('click', function(e) {
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
     xhr.send(JSON.stringify(formData));
     xhr.addEventListener('load', function() {
-      console.log(xhr.status);
     });
+    overlayOrder.style.display = "flex";
+  } else {
+    overlayOrder.style.display = "flex";
+    orderMessage.textContent = 'Сообщение не отправлено';
+  }
+});
+
+overlayClose.addEventListener('click', function(e) {
+  e.preventDefault();
+  overlayOrder.style.display = "none";
+});
+
+overlayOrder.addEventListener('click', function(e) {
+  if (e.target === overlayOrder) {
+    overlayClose.click();
   }
 });
 
@@ -163,9 +180,8 @@ function validateForm(form) {
   }
 
   return valid;
-}
+};
 
 function validateField(field) {
-  /* field.textContent = field.validationMessage; */
   return field.checkValidity();
-}
+};

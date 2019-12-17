@@ -2040,3 +2040,44 @@ button {
 
 .burgers__order-btn {
   margin-left: 0.9375rem; }
+
+.overlay-order {
+  background-color: rgba(47, 50, 52, 0.8);
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200; }
+
+.overlay-order__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5%;
+  padding: 1.5625rem;
+  overflow: hidden;
+  margin-bottom: 150vh; }
+
+.overlay-order__message {
+  font-family: 'Ubuntu-Light', sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 1.5625rem; }
