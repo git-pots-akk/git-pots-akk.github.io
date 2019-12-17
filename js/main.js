@@ -117,8 +117,14 @@ for (let i = 0; i < menuAccItem.length; i++) {
         menuAccTrigger[i].classList.add('menu-accordeon__trigger--active');
       }
     }
+    menu.addEventListener('click', function(e) {
+      if (e.target === menu) {
+        menuAccTrigger[i].classList.remove('menu-accordeon__trigger--active');
+      };
+    });
   });
 };
+
 
 /* js for order-form */
 
