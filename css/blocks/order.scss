@@ -65,7 +65,7 @@
 .order-form__row {
   display: flex;
   margin-bottom: rem(15px);
-  
+
   &--inline {
     @include phones {
       justify-content: center;
