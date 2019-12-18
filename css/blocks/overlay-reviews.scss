@@ -1,0 +1,57 @@
+.overlay-reviews {
+  background-color: rgba($black, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 150;
+}
+
+.overlay-reviews__block {
+  position: relative;
+  width: rem(460px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $white;
+  border-radius: 3%;
+  padding: rem(30px) rem(20px);
+  overflow: hidden;
+
+  @include phones {
+    width: 95%;
+  }
+}
+
+.overlay-reviews__name {
+  @include gagalin();
+  font-size: rem(14px);
+  text-transform: uppercase;
+  padding-bottom: rem(25px);
+}
+
+.overlay-reviews__text {
+  @include ubuntu(Light);
+  font-size: rem(14px);
+  line-height: 1.7;
+  overflow: hidden;
+}
+
+.reviews-exit__btn {
+  position: absolute;
+  top: rem(15px);
+  right: rem(15px);
+  cursor: pointer;
+}
+
+.reviews-exit__icon {
+  fill: $red;
+  stroke: $red;
+  stroke-width: rem(1px);
+  width: rem(20px);
+  height: rem(20px);
+}

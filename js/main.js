@@ -126,6 +126,39 @@ for (let i = 0; i < menuAccItem.length; i++) {
 };
 
 
+/* js for reviews */
+
+const openReviews = document.querySelectorAll('.reviews__btn');
+const overlayReviews = document.querySelector('.overlay-reviews');
+const closeReviews = overlayReviews.querySelector('.reviews-exit__btn');
+const overlayName = overlayReviews.querySelector('.overlay-reviews__name');
+const overlayText = overlayReviews.querySelector('.overlay-reviews__text');
+
+for (let i = 0; i < openReviews.length; i++) {
+  openReviews[i].addEventListener('click', function(e) {
+    e.preventDefault();
+    overlayReviews.style.display = 'flex';
+
+    let thisParent = this.parentNode;
+    let name = thisParent.querySelector('.reviews__name').innerText;
+    let text = thisParent.querySelector('.reviews__text p').innerText;
+
+    overlayName.textContent = name;
+    overlayText.textContent = text;
+  });
+};
+
+closeReviews.addEventListener('click', function(e) {
+  e.preventDefault();
+  overlayReviews.style.display = 'none';
+});
+
+overlayReviews.addEventListener('click', function(e) {
+  if (e.target === overlayReviews) {
+    closeReviews.click();
+  };
+});
+
 /* js for order-form */
 
 const orderForm = document.querySelector('#order-form');
@@ -152,7 +185,7 @@ sendOrder.addEventListener('click', function(e) {
     xhr.addEventListener('load', function() {
     });
     overlayOrder.style.display = 'flex';
-    console.log(xhr.response.status);
+    console.log(xhr.response.messsage);
   } else {
     overlayOrder.style.display = 'flex';
     orderMessage.textContent = 'Сообщение не отправлено';
@@ -192,3 +225,15 @@ function validateForm(form) {
 function validateField(field) {
   return field.checkValidity();
 };
+
+
+/* $(document).ready(() => {
+
+  $('.nav__link').on('click', e => {
+    e.preventDefault();
+
+    let result = $('.nav__link').outerWidth(true);
+
+    console.log(result);
+  });
+}); */
