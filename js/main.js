@@ -53,29 +53,100 @@ hamburgerMenu.addEventListener('click', function(e) {
   }
 });
 
-/* js for burgers-slider */
+/* jQuery for burgers-slider */
 
-const right = document.querySelector('.burgers__scroll-btn--right');
-const left = document.querySelector('.burgers__scroll-btn--left');
-const burgerSlider = document.querySelector('.burgers__sliders');
 
-right.addEventListener('click', function(e) {
-  loop('right', e);
-});
+/* $(document).ready(function(){
+  $('.burgers__sliders').bxSlider();
+}); */
 
-left.addEventListener('click', function(e) {
-  loop('left', e);
-});
+ $(function() {
 
-function loop(direction, e) {
-  e.preventDefault();
-  if (direction === 'right') {
-    burgerSlider.appendChild(burgerSlider.firstElementChild);
-  } else if (direction === 'left') {
-    burgerSlider.insertBefore(burgerSlider.lastElementChild, burgerSlider.firstElementChild);
+  var coloringDots = function (index) {
+    $('.burgers__sliders')
+        .find('.slider__dot-item')
+        .eq(index)
+        .addClass('slider__dot-item--active')
+        .siblings()
+        .removeClass('slider__dot-item--active');
+  }
+
+  var generateDots = function () {
+    $('.sliders__item').each(function () {
+      var dot = $('<li>', {
+        attr: {
+          class : 'slider__dot-item'
+        },
+        html : '<div class="slider__dot-circle"></div>'
+      });
+
+      $('.slider__dots').append(dot);
+    })
   };
-};
 
+  generateDots();
+
+  var moveSlider = function(container, slideNum) {
+
+    var
+
+        items = container.find('.sliders__item'),
+        activeSlider = items.filter('.active'),
+        reqItem = items.eq(slideNum),
+        reqIndex = reqItem.index(),
+        list = container.find('.sliders__list');
+        duration = 1000;
+    
+    if (reqItem.length) {
+      list.animate( {
+        left : -reqIndex * 100 + '%'
+      }, duration, function() {
+        activeSlider.removeClass('active');
+        reqItem.addClass('active');
+        coloringDots(slideNum);
+      });
+    };
+  };
+
+  $('.burgers__scroll-btn').on('click', function(e) {
+    e.preventDefault();
+
+    var $this = $(this);
+        container = $this.closest('.burgers__sliders'),
+        items = container.find('.sliders__item'),
+        activeSlider = items.filter('.active'),
+        nextItem = activeSlider.next();
+        prevItem = activeSlider.prev();
+
+    if ($this.hasClass('burgers__scroll-btn--right')) {
+      
+      if (nextItem.length) {
+        moveSlider(container, nextItem.index());
+      } else {
+        moveSlider(container, items.first().index());
+      }
+    } 
+    
+    if ($this.hasClass('burgers__scroll-btn--left')) {
+
+      if (prevItem.length) {
+        moveSlider(container, prevItem.index());
+      } else {
+        moveSlider(container, items.last().index());
+      }
+    }
+  });
+
+  $('body').on('click', '.slider__dot-item', function () {
+    var $this = $(this),
+        container = $this.closest('.burgers__sliders'),
+        index = $this.index();
+
+    moveSlider(container, index);
+    coloringDots(index);
+  })
+
+});
 
 /* js for team-Accordeon */
 
@@ -227,13 +298,24 @@ function validateField(field) {
 };
 
 
-/* $(document).ready(() => {
+/* function debounce(func, time) {
+  let timeout;
 
-  $('.nav__link').on('click', e => {
-    e.preventDefault();
+  return function() {
+    const context = this;
+    const args = arguments;
 
-    let result = $('.nav__link').outerWidth(true);
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      func.apply(context, args);
+    }, time)
+  };
+};
 
-    console.log(result);
-  });
+let hello = debounce(() => {
+  console.log('Hello');
+}, 1000)
+
+$(window).scroll(() => {
+  hello();
 }); */
