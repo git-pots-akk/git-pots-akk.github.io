@@ -55,11 +55,6 @@ hamburgerMenu.addEventListener('click', function(e) {
 
 /* jQuery for burgers-slider */
 
-
-/* $(document).ready(function(){
-  $('.burgers__sliders').bxSlider();
-}); */
-
  $(function() {
 
   var coloringDots = function (index) {
@@ -145,6 +140,81 @@ hamburgerMenu.addEventListener('click', function(e) {
     moveSlider(container, index);
     coloringDots(index);
   })
+
+});
+
+/* jQuery for onePageScroll */
+
+$(function () {
+
+  var 
+      screen = 0,
+      container = $('.main-content'),
+      page = $('.section'),
+      inscroll = false;
+
+  $('body').on('mousewheel', function(e) {
+
+    var activePage = page.filter('.active');
+
+    if (!inscroll) {
+      inscroll = true;
+
+      if (e.deltaY > 0) {
+        
+        if (activePage.prev(page).length) {
+          screen--;
+        };
+  
+      } else {
+
+        if (activePage.next(page).length) {
+          screen++;
+        };
+      }
+    }
+
+    var 
+        position = -screen * 100 + '%';
+        page.eq(screen).addClass('active').siblings().removeClass('active');
+
+    container.css('top', position);
+
+    setTimeout(function() {
+      inscroll = false;
+    }, 1300);
+
+  });
+
+
+
+  var navLink = $('.nav__item');
+
+  $('.nav__item').on('click', function (e) {
+    e.preventDefault();
+
+    var $this = $(this),
+        index = $this.index();
+        position = -(index + 1) * 100 + '%';
+        sidebarDots.eq(index).addClass('active').siblings().removeClass('active');
+
+    container.css('top', position);
+
+  });
+
+  var sidebarDots = $('.sidebar-menu__item');
+
+  $('.sidebar-menu__item').on('click', function (e) {
+    e.preventDefault();
+
+    var $this = $(this),
+        index = $this.index();
+        position = -index * 100 + '%';
+        sidebarDots.eq(index).addClass('active').siblings().removeClass('active');
+
+    container.css('top', position);
+
+  });
 
 });
 
@@ -297,25 +367,3 @@ function validateField(field) {
   return field.checkValidity();
 };
 
-
-/* function debounce(func, time) {
-  let timeout;
-
-  return function() {
-    const context = this;
-    const args = arguments;
-
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      func.apply(context, args);
-    }, time)
-  };
-};
-
-let hello = debounce(() => {
-  console.log('Hello');
-}, 1000)
-
-$(window).scroll(() => {
-  hello();
-}); */

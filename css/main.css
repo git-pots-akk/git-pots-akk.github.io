@@ -369,6 +369,15 @@ body {
   min-height: 100%;
   overflow: hidden; }
 
+.main-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transition: top 1s;
+  -o-transition: top 1s;
+  transition: top 1s; }
+
 .section {
   height: 100vh;
   min-height: 40.625rem;
@@ -456,6 +465,7 @@ button {
 
 .header {
   position: absolute;
+  top: 0;
   width: 100%;
   padding-top: 0.75rem;
   z-index: 10; }
@@ -2223,3 +2233,25 @@ button {
   stroke-width: 0.0625rem;
   width: 1.25rem;
   height: 1.25rem; }
+
+.howwework {
+  background-image: url(../img/bgr/bg_howwework.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.howwework__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
