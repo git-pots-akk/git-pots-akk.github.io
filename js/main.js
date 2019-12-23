@@ -479,3 +479,71 @@ scaleVol.addEventListener('click', function(e) {
   volumePosPer = volumePos * 100 + '%';
   circleVol.style.left = volumePosPer;
 });
+
+/* js for yandex maps */
+
+ymaps.ready(init);
+
+  var plasemarks = [
+    {
+      latItude: 61.66890065,
+      longItude: 50.83143875,
+      hintContent: '<div class="map__hint">Бургер\'Яс №1 БЦ \"Авалон\"</div>',
+      balloonContent: [
+        '<div class="map__balloon"',
+        '<img class = map__burger_img>',
+        'Бургер\'Яс №1 БЦ \"Авалон\" Сыктывкар, ул. Первомайская, д.133',
+        '</div>'
+        ]
+    },
+
+    {
+      latItude: 61.66397448,
+      longItude: 50.81734963,
+      hintContent: '<div class="map__hint">Бургер\'Яс №2 \"Карлсон\"</div>',
+      balloonContent: [
+        '<div class="map__balloon"',
+        '<img class = map__burger_img>',
+        'Бургер\'Яс №2 \"Карлсон\" Сыктывкар, Коммунистическая, д.31/1',
+        '</div>'
+        ]
+    },
+    
+    {
+      latItude: 61.67071917,
+      longItude: 50.83141494,
+      hintContent: '<div class="map__hint">Бургер\'Яс №3 \"Администрация\"</div>',
+      balloonContent: [
+        '<div class="map__balloon"',
+        '<img class = map__burger_img>',
+        'Бургер\'Яс №3 \"Администрация\" Сыктывкар, ул. Бабушкина, д.22',
+        '</div>'
+        ]
+    }
+  ];
+
+  function init(){
+    var myMap = new ymaps.Map("map", {
+        center: [61.67, 50.82],
+        zoom: 13,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
+
+  plasemarks.forEach(function(obj) {
+    var placemark = new ymaps.Placemark([obj.latItude, obj.longItude], {
+      hintContent: obj.hintContent,
+      balloonContent: obj.balloonContent.join('')
+    },
+    {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/icons/map-marker.svg',
+      iconImageSize: [46, 55],
+      iconImageOffset: [-23, -57]
+    });
+    
+    myMap.geoObjects.add(placemark);
+
+  });
+
+};
