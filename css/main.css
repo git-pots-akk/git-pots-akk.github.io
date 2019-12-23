@@ -366,7 +366,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden; }
 
 .main-content {
@@ -461,7 +461,8 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: inherit; }
+  color: inherit;
+  outline: none; }
 
 .header {
   position: absolute;
@@ -1240,10 +1241,7 @@ button {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  border: transparent; */ }
+  clip: rect(0, 0, 0, 0); }
 
 .radio__box {
   position: absolute;
@@ -1267,10 +1265,7 @@ button {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  border: transparent; */ }
+  clip: rect(0, 0, 0, 0); }
 
 .check__box {
   position: absolute;
@@ -2137,9 +2132,9 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -2164,8 +2159,7 @@ button {
   background-color: #fff;
   border-radius: 5%;
   padding: 1.5625rem;
-  overflow: hidden;
-  margin-bottom: 150vh; }
+  overflow: hidden; }
 
 .overlay-order__message {
   font-family: 'Ubuntu-Light', sans-serif;
@@ -2241,7 +2235,7 @@ button {
   background-size: cover;
   position: relative; }
 
-.howwework__content {
+.howwework__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2255,3 +2249,135 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.howwework__title {
+  padding-bottom: 3.125rem; }
+
+.howwework__vid {
+  position: relative;
+  width: 41.25rem;
+  height: 25.625rem; }
+
+#player {
+  width: 100%;
+  height: 100%; }
+
+.splash-player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/cnt/video.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+
+.howwework__vid-bar {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  height: 2.1875rem;
+  background-color: #2f3234;
+  padding: 0 1.25rem; }
+
+.vid-bar__icon {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  fill: #5a5a5a;
+  stroke: #5a5a5a; }
+  .vid-bar__icon--play {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1.5625rem;
+    height: 1.25rem; }
+  .vid-bar__icon--pause {
+    position: relative;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    width: 1.5625rem;
+    height: 1.25rem;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .vid-bar__icon--scaletime {
+    position: relative;
+    width: 27.75rem;
+    height: 0.25rem;
+    background-color: #5a5a5a; }
+  .vid-bar__icon--volume {
+    width: 1.5625rem;
+    height: 1.25rem; }
+  .vid-bar__icon--mute {
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .vid-bar__icon--scalevol {
+    position: relative;
+    width: 3.75rem;
+    height: 0.25rem;
+    background-color: #5a5a5a; }
+
+.play__line {
+  width: 1.25rem;
+  height: 0.25rem;
+  background-color: #5a5a5a; }
+
+.mute__line {
+  width: 1.875rem;
+  height: 0.25rem;
+  background-color: #5a5a5a; }
+
+.video-volume {
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem; }
+
+.vid-bar__icon_img {
+  width: 100%;
+  height: 100%; }
+
+.icon__scale {
+  width: 100%;
+  height: 100%; }
+
+.vid-bar__icon_circle {
+  display: block;
+  content: "";
+  width: 0.8125rem;
+  height: 0.8125rem;
+  background-color: #5a5a5a;
+  border-radius: 50%;
+  position: absolute;
+  left: 0; }

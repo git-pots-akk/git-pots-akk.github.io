@@ -84,7 +84,6 @@ hamburgerMenu.addEventListener('click', function(e) {
   var moveSlider = function(container, slideNum) {
 
     var
-
         items = container.find('.sliders__item'),
         activeSlider = items.filter('.active'),
         reqItem = items.eq(slideNum),
@@ -148,10 +147,14 @@ hamburgerMenu.addEventListener('click', function(e) {
 $(function () {
 
   var 
-      screen = 0,
+      index = 0,
       container = $('.main-content'),
       page = $('.section'),
       inscroll = false;
+
+  var 
+      sidebarDots = $('.sidebar-menu__item');
+
 
   $('body').on('mousewheel', function(e) {
 
@@ -162,21 +165,22 @@ $(function () {
 
       if (e.deltaY > 0) {
         
-        if (activePage.prev(page).length) {
-          screen--;
+        if (activePage.prev().length) {
+          index--;
         };
   
       } else {
 
-        if (activePage.next(page).length) {
-          screen++;
+        if (activePage.next().length) {
+          index++;
         };
       }
     }
 
     var 
-        position = -screen * 100 + '%';
-        page.eq(screen).addClass('active').siblings().removeClass('active');
+        position = -index * 100 + '%';
+        page.eq(index).addClass('active').siblings().removeClass('active');
+        sidebarDots.eq(index).addClass('active').siblings().removeClass('active');
 
     container.css('top', position);
 
@@ -186,8 +190,6 @@ $(function () {
 
   });
 
-
-
   var navLink = $('.nav__item');
 
   $('.nav__item').on('click', function (e) {
@@ -196,13 +198,14 @@ $(function () {
     var $this = $(this),
         index = $this.index();
         position = -(index + 1) * 100 + '%';
-        sidebarDots.eq(index).addClass('active').siblings().removeClass('active');
 
     container.css('top', position);
 
   });
 
-  var sidebarDots = $('.sidebar-menu__item');
+  var 
+      sidebarDots = $('.sidebar-menu__item');
+      page = $('.section');
 
   $('.sidebar-menu__item').on('click', function (e) {
     e.preventDefault();
@@ -211,6 +214,7 @@ $(function () {
         index = $this.index();
         position = -index * 100 + '%';
         sidebarDots.eq(index).addClass('active').siblings().removeClass('active');
+        page.eq(index).addClass('active').siblings().removeClass('active');
 
     container.css('top', position);
 
@@ -320,13 +324,14 @@ sendOrder.addEventListener('click', function(e) {
     formData.append('to', 'email@mail.com');
 
     const xhr = new XMLHttpRequest();
-    xhr.responseType = 'json';
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.send(formData);
-    xhr.addEventListener('load', function() {
+      xhr.responseType = 'json';
+      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+      xhr.send(formData);
+      xhr.addEventListener('load', function() {
     });
+
     overlayOrder.style.display = 'flex';
-    console.log(xhr.response.messsage);
+
   } else {
     overlayOrder.style.display = 'flex';
     orderMessage.textContent = 'Сообщение не отправлено';
@@ -367,3 +372,110 @@ function validateField(field) {
   return field.checkValidity();
 };
 
+/* js for video player */
+
+const splashPlayer = document.querySelector('.splash-player');
+const videoPlayer = document.querySelector('#player');
+const playVid = document.querySelector('.video-play');
+const playButton = document.querySelector('.vid-bar__icon--play');
+const pauseButton = document.querySelector('.vid-bar__icon--pause');
+const vidVolume = document.querySelector('.video-volume');
+const muteButton = document.querySelector('.vid-bar__icon--mute');
+const circleTime = document.querySelector('.vid-bar__icon-circle--scale');
+const scaleTime = document.querySelector('.vid-bar__icon--scaletime');
+const circleVol = document.querySelector('.vid-bar__icon-circle--volume');
+const scaleVol = document.querySelector('.vid-bar__icon--scalevol');
+
+
+let startVid = function () {
+  videoPlayer.play();
+  playVid.classList.add('active');
+  playButton.style.display = 'none';
+  pauseButton.style.display = 'flex';
+  console.log(videoPlayer.volume);
+
+  let interval;
+
+  if (typeof interval != 'undefined') {
+    clearInterval(interval);
+  }
+  
+  interval = setInterval(function() {
+    let durationSec = videoPlayer.duration;
+    let comletedSec = videoPlayer.currentTime;
+    let scaleVid = (comletedSec / durationSec) * 100 + '%';
+    circleTime.style.left = scaleVid;
+  }, 500);
+
+};
+
+let stopVid = function () {
+  videoPlayer.pause();
+  playVid.classList.remove('active');
+  playButton.style.display = 'flex';
+  pauseButton.style.display = 'none';
+};
+
+scaleTime.addEventListener('click', function(e) {
+  let timePos = (e.offsetX / e.target.offsetWidth);
+  videoPlayer.currentTime = (e.offsetX / e.target.offsetWidth) * videoPlayer.duration;
+  timePosPer = timePos * 100 + '%';
+  circleTime.style.left = timePosPer;
+});
+
+videoPlayer.addEventListener('click', function(e) {
+
+  if (e.target === videoPlayer) {
+    if (!playVid.classList.contains('active')) {
+      splashPlayer.style.display = 'none';
+      startVid();
+  
+    } else { 
+      stopVid();
+    }
+  }
+});
+
+playVid.addEventListener('click', function(e) {
+
+  if (!playVid.classList.contains('active')) {
+    startVid();
+
+  } else { 
+    stopVid();
+  }
+});
+
+splashPlayer.addEventListener('click', function(e) {
+
+  if (e.target === splashPlayer) {
+    if (!playVid.classList.contains('active')) {
+      splashPlayer.style.display = 'none';
+      startVid();
+    };
+  };
+});
+
+vidVolume.addEventListener('click', function(e) {
+  
+  if (!vidVolume.classList.contains('active')) {
+    videoPlayer.muted = true;
+    vidVolume.classList.add('active');
+    muteButton.style.display = 'flex';
+
+  } else {
+    videoPlayer.muted = false;
+    vidVolume.classList.remove('active');
+    muteButton.style.display = 'none';
+  }
+});
+
+let circleVolPos = videoPlayer.volume * 100 + '%';
+circleVol.style.left = circleVolPos;
+
+scaleVol.addEventListener('click', function(e) {
+  let volumePos = (e.offsetX / e.target.offsetWidth);
+  videoPlayer.volume = (e.offsetX / e.target.offsetWidth);
+  volumePosPer = volumePos * 100 + '%';
+  circleVol.style.left = volumePosPer;
+});

@@ -6,9 +6,143 @@
   position: relative;
 }
 
-.howwework__content {
+.howwework__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.howwework__title {
+  padding-bottom: rem(50px);
+}
+
+.howwework__vid {
+  position: relative;
+  width: rem(660px);
+  height: rem(410px);
+}
+
+#player {
+  width: 100%;
+  height: 100%;
+}
+
+.splash-player {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/cnt/video.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.howwework__vid-bar {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: rem(35px);
+  background-color: $black;
+  padding: 0 rem(20px);
+}
+
+.vid-bar__icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  fill: $grey;
+  stroke: $grey;
+  
+  &--play {
+    display: flex;
+    width: rem(25px);
+    height: rem(20px);
+  }
+
+  &--pause {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: rem(25px);
+    height: rem(20px);
+    transform: rotate(90deg);
+  }
+  
+  &--scaletime {
+    position: relative;
+    width: rem(444px);
+    height: rem(4px);
+    background-color: $grey;
+  }
+  
+  &--volume {
+    width: rem(25px);
+    height: rem(20px);
+  }
+
+  &--mute {
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+  }
+
+  &--scalevol {
+    position: relative;
+    width: rem(60px);
+    height: rem(4px);
+    background-color: $grey;
+  }
+  
+}
+
+.play__line {
+  width: rem(20px);
+  height: rem(4px);
+  background-color: $grey;
+}
+
+.mute__line {
+  width: rem(30px);
+  height: rem(4px);
+  background-color: $grey;
+}
+
+.video-volume {
+  position: relative;
+  width: rem(30px);
+  height: rem(30px);
+}
+
+.vid-bar__icon_img {
+  width: 100%;
+  height: 100%;
+}
+
+.icon__scale {
+  width: 100%;
+  height: 100%;
+}
+
+.vid-bar__icon_circle {
+  display: block;
+  content: "";
+  width: rem(13px);
+  height: rem(13px);
+  background-color: $grey;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
 }

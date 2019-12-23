@@ -175,7 +175,7 @@
           </div>
         </section>
   
-        <section class="section burgers">
+        <section class="section burgers" id="burgers">
           <div class="container burgers__container">
             <div class="burgers__sliders">
               <ul class="sliders__list">
@@ -846,9 +846,42 @@
   
         </section>
 
-        <section class="section howwework">
+        <section class="section howwework" id="howwework">
           <div class="container howwework__container">
             <h2 class="title howwework__title title--color--black">Как мы работаем</h2>
+            <div class="howwework__vid">
+              <video id="player" src="/vid/videoplayback.mp4"></video>
+              <div class="splash-player"></div>
+              <div class="howwework__vid-bar">
+                <button class="video-play">
+                  <div class="vid-bar__icon vid-bar__icon--play">
+                    <svg class="vid-bar__icon_img">
+                      <use xlink:href="img/icons/sprite.svg#play"></use>
+                    </svg>
+                  </div>
+                  <div class="vid-bar__icon vid-bar__icon--pause">
+                    <div class="play__line"></div>
+                    <div class="play__line"></div>
+                  </div>
+                </button>
+                <div class="vid-bar__icon vid-bar__icon--scaletime">
+                  <button class="vid-bar__icon_circle vid-bar__icon-circle--scale"></button>
+                </div>
+                <button class="video-volume">
+                  <div class="vid-bar__icon vid-bar__icon--volume">
+                    <svg class="vid-bar__icon_img">
+                      <use xlink:href="img/icons/sprite.svg#volume"></use>
+                    </svg>
+                  </div>
+                  <div class="vid-bar__icon vid-bar__icon--mute">
+                    <div class="mute__line"></div>
+                  </div>
+                </button>
+                <div class="vid-bar__icon vid-bar__icon--scalevol">
+                  <button class="vid-bar__icon_circle vid-bar__icon-circle--volume"></button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
     
@@ -1014,6 +1047,7 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="js/jquery.mousewheel.min.js"></script>
+      <script src="https://www.youtube.com/iframe_api"></script>
       <script defer src="js/main.js"></script>
 
     </body>

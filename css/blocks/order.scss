@@ -146,7 +146,6 @@
   }
 }
 
-
 .radio {
   cursor: pointer;
   padding-left: rem(25px);
@@ -158,9 +157,6 @@
   height: 1px;
   overflow: hidden;
   clip: rect(0,0,0,0);
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  border: transparent; */
 }
 
 .radio__box {
@@ -189,9 +185,6 @@
   height: 1px;
   overflow: hidden;
   clip: rect(0,0,0,0);
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  border: transparent; */
 }
 
 .check__box {
@@ -208,8 +201,6 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
-
-
 
 .btn__reset {
   background-color: transparent;

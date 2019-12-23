@@ -2,7 +2,7 @@
   background-color: rgba($black, 0.8);
   display: none;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -20,7 +20,6 @@
   border-radius: 5%;
   padding: rem(25px);
   overflow: hidden;
-  margin-bottom: 150vh;
 }
 
 .overlay-order__message {
