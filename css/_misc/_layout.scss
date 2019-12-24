@@ -38,8 +38,13 @@ body {
   height: 100%;
   min-height: rem(650px);
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
+
+  @include tablets {
+    min-height: initial;
+  }
 }
 
 .container {
