@@ -241,6 +241,7 @@ if (isMobile) {
       fingerData
     ) {
     const scrollDirections = direction === 'up' ? 'next' : 'prev';
+    scrollToSection(scrollDirections);
     }
   });
 };
