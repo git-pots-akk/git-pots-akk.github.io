@@ -6,6 +6,15 @@
   align-items: center;
 }
 
+.sidebar-menu__item {
+
+  &+.active {
+    .sidebar-menu__dot {
+      border-color: $white;
+    }
+  }
+} 
+
 .sidebar-menu__dot {
   display: block;
   height: rem(20px);
@@ -15,9 +24,9 @@
   margin-bottom: rem(2px);
   position: relative;
 
-  &:active {
+ /*  &:active {
     border-color: $white;
-  }
+  } */
 
   &:hover {
     border-color: $white;

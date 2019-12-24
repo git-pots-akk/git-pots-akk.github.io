@@ -144,83 +144,106 @@ hamburgerMenu.addEventListener('click', function(e) {
 
 /* jQuery for onePageScroll */
 
-$(function () {
+const sections = $('.section');
+const display = $('.main-content');
+let inscroll = false;
 
-  var 
-      index = 0,
-      container = $('.main-content'),
-      page = $('.section'),
-      inscroll = false;
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
 
-  var 
-      sidebarDots = $('.sidebar-menu__item');
+const performTransition = function(sectionEq) {
+  if (inscroll) return;
+  inscroll = true;
+  const transitionIsOver = 1000;
+  const mouseInertionIsOver = 300;
+  const position = sectionEq * -100;
 
+  sections
+  .eq(sectionEq)
+  .addClass('active')
+  .siblings()
+  .removeClass('active');
 
-  $('body').on('mousewheel', function(e) {
-
-    var activePage = page.filter('.active');
-
-    if (!inscroll) {
-      inscroll = true;
-
-      if (e.deltaY > 0) {
-        
-        if (activePage.prev().length) {
-          index--;
-        };
+  display.css({
+    transform: `translateY(${position}%)`
+  });
   
-      } else {
+  setTimeout(function() {
+    inscroll = false;
 
-        if (activePage.next().length) {
-          index++;
-        };
-      }
-    }
+    $('.sidebar-menu__item')
+    .eq(sectionEq)
+    .addClass('active')
+    .siblings()
+    .removeClass('active');
 
-    var 
-        position = -index * 100 + '%';
-        page.eq(index).addClass('active').siblings().removeClass('active');
-        sidebarDots.eq(index).addClass('active').siblings().removeClass('active');
+  }, transitionIsOver + mouseInertionIsOver);
+};
 
-    container.css('top', position);
+const scrollToSection = function(direction) {
+  const activeSection = sections.filter('.active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
 
-    setTimeout(function() {
-      inscroll = false;
-    }, 1300);
+  if (direction === 'next' && nextSection.length) {
+    performTransition(nextSection.index());
+  }
 
-  });
+  if (direction === 'prev' && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+}
 
-  var navLink = $('.nav__item');
+$(window).on('wheel', function(e) {
+  const deltaY = e.originalEvent.deltaY;
 
-  $('.nav__item').on('click', function (e) {
-    e.preventDefault();
+  if (deltaY > 0) {e
+    scrollToSection('next');
+  }
 
-    var $this = $(this),
-        index = $this.index();
-        position = -(index + 1) * 100 + '%';
-
-    container.css('top', position);
-
-  });
-
-  var 
-      sidebarDots = $('.sidebar-menu__item');
-      page = $('.section');
-
-  $('.sidebar-menu__item').on('click', function (e) {
-    e.preventDefault();
-
-    var $this = $(this),
-        index = $this.index();
-        position = -index * 100 + '%';
-        sidebarDots.eq(index).addClass('active').siblings().removeClass('active');
-        page.eq(index).addClass('active').siblings().removeClass('active');
-
-    container.css('top', position);
-
-  });
-
+  if (deltaY < 0) {
+    scrollToSection('prev');
+  }
 });
+
+$(window).on('keydown', function(e) {
+
+  const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+
+  if (userTypingInInputs) return;
+  switch(e.keyCode) {
+    case 38:
+      scrollToSection('prev');
+      break;
+    case 40:
+      scrollToSection('next');
+      break;
+  };
+});
+
+$('[data-scroll-to]').on('click', function(e) {
+  e.preventDefault;
+  const $this = $(e.currentTarget);
+  const target = $this.attr('data-scroll-to');
+
+  performTransition(target);
+});
+
+if (isMobile) {
+  $("body").swipe( {
+    swipe:function(
+      event,
+      direction,
+      distance,
+      duration,
+      fingerCount,
+      fingerData
+    ) {
+    const scrollDirections = direction === 'up' ? 'next' : 'prev';
+    }
+  });
+};
 
 /* js for team-Accordeon */
 

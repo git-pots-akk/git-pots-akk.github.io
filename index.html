@@ -10,48 +10,6 @@
   <body>
     <div class="wrapper">
       
-      <div class="overlay-order">
-        <div class="overlay-order__title">
-          <span class="overlay-order__message">Cообщение отправлено</span>
-          <button class="btn order-exit__btn">Закрыть</button>
-        </div>
-      </div>
-
-      <div class="hamburger">
-        <div class="ham__logo">
-          <svg class="icon logo-icon">
-            <use xlink:href="img/icons/sprite.svg#logo"></use>
-          </svg>
-        </div>
-        <div class="ham-exit">
-          <a href="#" class="ham-exit__btn">
-            <svg class="ham-exit__icon">
-              <use xlink:href="img/icons/sprite.svg#ham_exit"></use>
-            </svg>
-          </a>
-        </div>
-        <ul class="ham-menu__list">
-          <li class="ham-menu__item">
-            <a href="#wearebest" class="ham-menu__link">О нас</a>
-          </li>
-          <li class="ham-menu__item">
-            <a href="#burgers" class="ham-menu__link">Бургеры</a>
-          </li>
-          <li class="ham-menu__item">
-            <a href="#team" class="ham-menu__link">Команда</a>
-          </li>
-          <li class="ham-menu__item">
-            <a href="#menu" class="ham-menu__link">Меню</a>
-          </li>
-          <li class="ham-menu__item">
-            <a href="#rewievs" class="ham-menu__link">Отзывы</a>
-          </li>
-          <li class="ham-menu__item">
-            <a href="#contacts" class="ham-menu__link">Контакты</a>
-          </li>
-        </ul>
-      </div>
-
       <div class="main-content">
         
         <section class="section promo active">
@@ -67,30 +25,30 @@
                 <nav class="nav">
                   <ul class="nav__list">
                     <il class="nav__item">
-                      <a href="#wearebest" class="nav__link">О нас</a>
+                      <a href="#" class="nav__link" data-scroll-to="1">О нас</a>
                     </il>
                     <il class="nav__item">
-                      <a href="#burgers" class="nav__link">Бургеры</a>
+                      <a href="#" class="nav__link" data-scroll-to="2">Бургеры</a>
                     </il>
                     <il class="nav__item">
-                      <a href="#team" class="nav__link">Команда</a>
+                      <a href="#" class="nav__link" data-scroll-to="3">Команда</a>
                     </il>
                     <il class="nav__item">
-                      <a href="#menu" class="nav__link">Меню</a>
+                      <a href="#" class="nav__link" data-scroll-to="4">Меню</a>
                     </il>
                     <il class="nav__item">
-                      <a href="#reviews" class="nav__link">Отзывы</a>
+                      <a href="#" class="nav__link" data-scroll-to="5">Отзывы</a>
                     </il>
                     <il class="nav__item">
-                      <a href="#howwework" class="nav__link">Как мы работаем</a>
+                      <a href="#" class="nav__link" data-scroll-to="6">Как мы работаем</a>
                     </il>
                     <il class="nav__item">
-                      <a href="#contacts" class="nav__link">Контакты</a>
+                      <a href="#" class="nav__link" data-scroll-to="7">Контакты</a>
                     </il>
                   </ul>
                 </nav>
                 <div class="header__order-btn">
-                  <a href="#order" class="btn">Заказать</a>
+                  <a href="#" class="btn" data-scroll-to="8">Заказать</a>
                 </div>
                 <div class="ham-menu__img">
                   <a href="#" class="ham-menu__btn">
@@ -831,19 +789,6 @@
               </div>
             </li>
           </ul>
-  
-          <div class="overlay-reviews">
-            <div class="overlay-reviews__block">
-              <div class="overlay-reviews__name"></div>
-              <div class="overlay-reviews__text"></div>
-              <a href="#" class="reviews-exit__btn">
-                <svg class="reviews-exit__icon">
-                  <use xlink:href="img/icons/sprite.svg#ham_exit"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-  
         </section>
 
         <section class="section howwework" id="howwework">
@@ -1012,42 +957,98 @@
         </footer>
         </section>
       </div>
+
+      <div class="overlay-order">
+        <div class="overlay-order__title">
+          <span class="overlay-order__message">Cообщение отправлено</span>
+          <button class="btn order-exit__btn">Закрыть</button>
+        </div>
+      </div>
+
+      <div class="overlay-reviews">
+        <div class="overlay-reviews__block">
+          <div class="overlay-reviews__name"></div>
+          <div class="overlay-reviews__text"></div>
+          <a href="#" class="reviews-exit__btn">
+            <svg class="reviews-exit__icon">
+              <use xlink:href="img/icons/sprite.svg#ham_exit"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hamburger">
+        <div class="ham__logo">
+          <svg class="icon logo-icon">
+            <use xlink:href="img/icons/sprite.svg#logo"></use>
+          </svg>
+        </div>
+        <div class="ham-exit">
+          <a href="#" class="ham-exit__btn">
+            <svg class="ham-exit__icon">
+              <use xlink:href="img/icons/sprite.svg#ham_exit"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="ham-menu__list">
+          <li class="ham-menu__item">
+            <a href="#wearebest" class="ham-menu__link">О нас</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#burgers" class="ham-menu__link">Бургеры</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#team" class="ham-menu__link">Команда</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#menu" class="ham-menu__link">Меню</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#rewievs" class="ham-menu__link">Отзывы</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#contacts" class="ham-menu__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
   
       <aside class="sidebar">
         <ul class="sidebar-menu">
           <li class="sidebar-menu__item active">
-            <a href="#promo" class="sidebar-menu__dot" aria-label="Главная"></a>
+            <a href="#" class="sidebar-menu__dot" data-scroll-to="0" aria-label="Главная"></a>
           </li>
           <li class="sidebar-menu__item">
-            <a href="#wearebest" class="sidebar-menu__dot" aria-label="О нас"></a>
+            <a href="#" class="sidebar-menu__dot" data-scroll-to="1" aria-label="О нас"></a>
           </li>
           <li class="sidebar-menu__item">
-            <a href="#burgers" class="sidebar-menu__dot" aria-label="Бургеры"></a>
+            <a href="#" class="sidebar-menu__dot" data-scroll-to="2" aria-label="Бургеры"></a>
           </li>
           <li class="sidebar-menu__item">
-            <a href="#team" class="sidebar-menu__dot" aria-label="Команда"></a>
+            <a href="#" class="sidebar-menu__dot" data-scroll-to="3" aria-label="Команда"></a>
           </li>
           <li class="sidebar-menu__item">
-            <a href="#menu" class="sidebar-menu__dot" aria-label="Меню"></a>
+            <a href="#" class="sidebar-menu__dot" data-scroll-to="4" aria-label="Меню"></a>
           </li>
           <li class="sidebar-menu__item">
-            <a href="#reviews" class="sidebar-menu__dot" aria-label="Отзывы"></a>
+            <a href="#" class="sidebar-menu__dot" data-scroll-to="5" aria-label="Отзывы"></a>
           </li>
           <li class="sidebar-menu__item">
-            <a href="#howwework" class="sidebar-menu__dot" aria-label="Как мы работаем"></a>
+            <a href="#" class="sidebar-menu__dot" data-scroll-to="6" aria-label="Как мы работаем"></a>
           </li>
           <li class="sidebar-menu__item">
-            <a href="#contacts" class="sidebar-menu__dot" aria-label="Контакты"></a>
+            <a href="#" class="sidebar-menu__dot" data-scroll-to="7" aria-label="Контакты"></a>
           </li>
           <li class="sidebar-menu__item">
-              <a href="#order" class="sidebar-menu__dot" aria-label="Заказать"></a>
+              <a href="#" class="sidebar-menu__dot" data-scroll-to="8" aria-label="Заказать"></a>
             </li>
           </ul>
       </aside>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="js/jquery.mousewheel.min.js"></script>
+      <script src="js/jquery.touchSwipe.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.4/mobile-detect.min.js"></script>
       <script src="https://www.youtube.com/iframe_api"></script>
       <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
       <script defer src="js/main.js"></script>
