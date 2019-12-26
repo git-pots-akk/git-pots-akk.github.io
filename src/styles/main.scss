@@ -1,0 +1,18 @@
+//colors
+
+$white: #fff;
+$red: #e45028;
+$yellow: #ffcc33;
+$black: #2f3234;
+$grey: #5a5a5a;
+$orange: #f08c33;
+
+//adjustment
+
+@import "./_misc/media";
+@import "./_misc/fonts";
+@import "./_misc/mixins";
+@import "./_misc/layout";
+
+//blocks
+@import "./blocks/*.scss";

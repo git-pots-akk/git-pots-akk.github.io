@@ -1,0 +1,30 @@
+.overlay-order {
+  background-color: rgba($black, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+}
+
+.overlay-order__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $white;
+  border-radius: 5%;
+  padding: rem(25px);
+  overflow: hidden;
+}
+
+.overlay-order__message {
+  @include ubuntu(Light);
+  font-size: rem(14px);
+  margin-bottom: rem(25px);
+}
+

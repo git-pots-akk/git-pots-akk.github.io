@@ -1,0 +1,403 @@
+.burgers {
+  background-image: linear-gradient(to bottom, #f9b43b 30%, #eb8c38 50%, #f9b43b 70%) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.burgers__container {
+  height: 100%;
+
+  @include tablets {
+    height: 100%;
+  }
+}
+
+.burgers__sliders {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  @include tablets {
+    height: 100%;
+  }
+}
+
+.sliders__list {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  @include tablets {
+    height: 100%;
+  }
+}
+
+.sliders__item {
+  display: flex;
+  min-width: 100%;
+  padding: 0 rem(50px);
+
+  @include tablets {
+    height: 100%;
+    flex-direction: column;
+    padding: 0 rem(25px);
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.burgers__scroll-btn {
+  width: rem(29px);
+  height: rem(15px);
+  position: absolute;
+
+  &--left {
+    bottom: 50%;
+    left: 0;
+    transform: rotate(90deg);
+  }
+
+  &--right {
+    bottom: 50%;
+    right: 0;
+    transform: rotate(-90deg);
+  }
+}
+
+.burgers__img {
+  display: flex;
+  align-items: center;
+  width: 50%;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
+
+  @include phones {
+    justify-content: space-between;
+    padding-top: 5%;
+  }
+}
+
+.burgers__img-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-right: rem(-100px);
+  padding: rem(5px) 0;
+  z-index: 60;
+
+
+  @include tablets {
+    flex-direction: row;
+    margin-right: 0;
+    width: 100%;
+    padding: rem(30px) rem(50px) 0;
+    margin-bottom: rem(-15px);
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.burgers-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: rem(90px);
+  height: rem(90px);
+  stroke: $white;
+
+  &--up {
+    background-color: $orange;
+    border-radius: 10%;
+  }
+}
+
+.burgers-icon__buns {
+  width: rem(65px);
+  height: rem(50px);
+}
+
+.burgers-icon_title {
+  @include gagalin();
+  color: $white;
+  font-size: rem(16px);
+  text-transform: uppercase;
+
+  &--number {
+    font-size: rem(24px);
+    margin-top: rem(-40px);
+  }
+
+  &--kkal {
+    margin-top: rem(5px);
+  }
+}
+
+.burgers-icon__kkal {
+  width: rem(90px);
+  height: rem(90px);
+}
+
+.burgers-icon__composition {
+  display: flex;
+
+  &:hover {
+    .burgers-icon--up {
+      background-color: $red;
+    }
+    .burgers-composition {
+      left: rem(140px);
+      opacity: 1;
+
+      @include tablets {
+        left: rem(140px) + rem(25px);
+      }
+
+      @include phones {
+        left: rem(90px);
+      }
+    }
+  }
+}
+
+.burgers-icon--up {
+  &:hover {
+    cursor: pointer;
+  } 
+}
+
+.burgers-composition {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity .5s;
+  position: absolute;
+  left: -1000px;
+  background-color: rgba($white, 0.8);
+  border-radius: 3%;
+  padding: rem(15px);
+  z-index: 50;
+
+  @include tablets {
+    padding: rem(10px);
+  }
+}
+
+.composition-exit {
+  display: none;
+  padding-left: rem(25px);
+  cursor: pointer;
+
+  @include tablets {
+    display: flex;
+  }
+}
+
+.composition-exit__icon {
+  fill: $red;
+  stroke: $red;
+  stroke-width: rem(1px);
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.composition__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(15px);
+
+  &:nth-child(1) {
+    padding-top: 0;
+  }
+  
+  @include tablets {
+    padding-top: rem(5px);
+  }
+}
+
+.composition__ing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.composition__img {
+  width: rem(45px);
+  height: rem(40px);
+}
+
+.composition__title {
+  @include ubuntu(Medium);
+  font-size: rem(14px);
+  line-height: 1.7;
+  color: $black;
+  padding-left: rem(15px);
+}
+
+.composition__weight {
+  @include ubuntu(Light);
+  font-size: rem(14px);
+  line-height: 1.7;
+  color: $black;
+  padding-left: rem(50px);
+}
+
+.burgers__img-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(470px);
+  height: rem(320px);
+  margin: rem(100px) 0;
+  
+  @include tablets {
+    max-width: 80%;
+    margin: 0;
+  }
+  
+  @include phones {
+    max-width: 90%;
+  }
+}
+
+.burgers__pic {
+  width: 100%;
+}
+
+.burgers__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-left: rem(30px);
+
+  @include tablets {
+    width: 100%;
+    height: 50%;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-top: rem(30px);
+  }
+
+  @include phones {
+    margin-top: 5%;
+  }
+}
+
+.burgers__title {
+
+  @include tablets {
+    font-size: rem(63px);
+    padding: 0 rem(50px);
+  }
+  @include phones {
+    font-size: rem(50px);
+    padding: 5%;
+  }
+}
+
+.burgers__subtitle {
+  display: flex;
+  flex-direction: column;
+  @include ubuntu(Light);
+  font-size: rem(14px);
+  color: $white;
+  line-height: 1.7;
+  padding-top: rem(50px);
+
+  @include tablets {
+    text-align: center;
+    align-items: center;
+    padding: rem(25px) rem(25px) 0;
+  }
+
+  @include phones {
+    padding: rem(10px) 0 0;
+  }
+}
+
+.burgers__order {
+  display: flex;
+  align-items: flex-end;
+  padding-top: rem(30px);
+
+  @include tablets {
+    padding-top: rem(15px);
+  }
+}
+
+.burgers__price {
+  display: flex;
+  align-items: baseline;
+  @include gagalin();
+  font-size: rem(72px);
+  line-height: 1;
+  color: $red;
+
+  @include tablets {
+    font-size: rem(63px);
+  }
+}
+
+.burger__price-rub {
+  font-size: rem(32px);
+  margin-left: rem(10px);
+
+  @include tablets {
+    font-size: rem(24px);
+    margin-left: rem(5px);
+  }
+}
+
+.burgers__order-btn {
+  margin-left: rem(15px);
+}
+
+.slider__dots {
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+}
+
+.slider__dot-item {
+  display: block;
+  content: '';
+  width: rem(20px);
+  height: rem(20px);
+  background-color: $orange;
+  border-radius: 50%;
+  margin-left: rem(20px);
+  cursor: pointer;
+
+  &:hover,
+  &--active {
+    background-color: $red;
+    transition: 1s;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include tablets {
+    display: none;
+  }
+}

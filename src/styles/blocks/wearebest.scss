@@ -1,0 +1,95 @@
+.wearebest {
+  background-image: url(./img/bgr/bg_wearebest.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.wearebest__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wearebest__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wearebest__title {
+  margin-bottom: 8%;
+}
+
+.wearebest__list {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.wearebest__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+
+  @include phones {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.wearebest__img {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.wearebest__icon {
+  width: rem(140px);
+  height: rem(100px);
+
+  @include tablets {
+    max-width: 90%;
+  }
+}
+
+.wearebest__subtitle {
+  @include lifehack();
+  font-size: rem(24px);
+  color: $black;
+  text-align: center;
+  padding-top: rem(45px);
+
+  @include phones {
+    text-align: left;
+    padding-top: rem(30px);
+    padding-left: 5%;
+  }
+}
+
+.wearebest__discription {
+  @include ubuntu(Light);
+  font-size: rem(14px);
+  color: $black;
+  text-align: center;
+  line-height: 1.7;
+  padding-top: rem(30px);
+
+  @include phones {
+    text-align: left;
+    padding-top: rem(20px);
+    padding-left: 5%;
+  }
+}

@@ -1,0 +1,122 @@
+.team {
+  background-image: url(./img/bgr/bg_team.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team-accordeon {
+  background-color: rgba($black, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 53%;
+  padding-top: 5%;
+  padding-left: 10%;
+
+  @include tablets {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10%;
+  }
+}
+
+.team__title {
+  margin-bottom: 10%;
+}
+
+.team-accordeon__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team-accordeon__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablets {
+    align-items: center;
+  }
+}
+
+.team-accordeon__trigger {
+  cursor: pointer;
+  @include gagalin();
+  color: $white;
+  font-size: rem(14px);
+  margin-bottom: rem(20px);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  &:before {
+    content: "";
+    display: block;
+    width: rem(10px);
+    height: rem(10px);
+    margin-right: rem(10px);
+    background: url(./img/buttons/bt_down.png) center center no-repeat;
+
+    }
+
+  @include tablets {
+    font-size: 24px;
+  }
+}
+
+.team-accordeon__trigger--active {
+  color: $yellow;
+  &:before {
+    background: url(./img/buttons/bt_up.png) center center no-repeat;
+  }
+}
+
+.team-accordeon__subtitle {
+  display: flex;
+  align-items: center;
+  width: rem(350px);
+  height: 0;
+  color: $white;
+  overflow: hidden;
+  line-height: 1.7;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.team-accordeon__trigger--active + .team-accordeon__subtitle {
+  height: 100%;
+  margin-bottom: rem(40px);
+}
+
+.team-accordeon__img {
+  display: block;
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: rem(20px) rem(25px);
+}
+
+.team-accordeon__discription {
+  @include ubuntu(Light);
+  font-size: rem(14px);
+
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.team-accordeon__range {
+  @include ubuntu(Bold);
+  margin-bottom: rem(20px);
+}
