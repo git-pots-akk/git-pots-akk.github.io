@@ -8,7 +8,7 @@
 
 .sidebar-menu__item {
 
-  &+.active {
+  &.active {
     .sidebar-menu__dot {
       border-color: $white;
     }

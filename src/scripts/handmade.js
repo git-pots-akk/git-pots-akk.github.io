@@ -61,9 +61,9 @@ hamburgerMenu.addEventListener('click', function(e) {
     $('.burgers__sliders')
         .find('.slider__dot-item')
         .eq(index)
-        .addClass('slider__dot-item--active')
+        .addClass('active')
         .siblings()
-        .removeClass('slider__dot-item--active');
+        .removeClass('active');
   }
 
   var generateDots = function () {

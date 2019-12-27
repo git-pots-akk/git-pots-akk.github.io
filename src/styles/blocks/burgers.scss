@@ -388,9 +388,9 @@
   cursor: pointer;
 
   &:hover,
-  &--active {
+  &.active {
     background-color: $red;
-    transition: 1s;
+    transition: .5s;
   }
 
   &:first-child {
