@@ -1,2 +1,3 @@
-Меня зовут Sergey Potolitsyn.
-А это мой учебный проект с курса онлайн-школы Loftschool "Веб-разработка для начинающих"
+Sergey Potolitsyn
+
+This is my project on the Loftschool online course "Web development for beginners"
