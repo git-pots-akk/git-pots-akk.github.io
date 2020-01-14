@@ -1,3 +1,3 @@
 Sergey Potolitsyn
 
-This is my project on the Loftschool online course "Web development for beginners"
+This is my first project on the Loftschool online course "Web development for beginners"
